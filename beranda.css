@@ -1,0 +1,958 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 115px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Container dalam Navbar */
+.nav-container {
+    width: calc(100% - 500px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Styling Left Menu (Logo + Nav Links) */
+.left-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Styling Logo */
+.logo {
+    position: relative;
+    z-index: 1101;
+}
+
+.logo img {
+    width: 115px;
+    height: 115px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+/* Styling Nav Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* Styling Right Menu (Hubungi Kami di Desktop) */
+.right-menu {
+    margin-left: auto;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+.contact-link:hover {
+    color: #007bff;
+}
+
+/* Styling Hamburger Menu */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    transition: 0.3s;
+    z-index: 1101;
+}
+
+/* Styling untuk div sampul */
+/* Styling untuk div sampul */
+.sampul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Responsif di semua layar */
+    height: 928px;
+    /* Default untuk desktop */
+    background: linear-gradient(to right, #00AED6, #0092CA);
+    z-index: -1;
+    /* Menempatkan frame di belakang navbar */
+}
+
+/* Styling untuk teks dalam sampul (Desktop) */
+.sampul-text {
+    position: absolute;
+    top: 179px;
+    left: 300px;
+    width: 534px;
+    height: 154px;
+    font-family: 'Inter', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    color: white;
+    line-height: 1.2;
+}
+
+/* Styling untuk paragraf dalam sampul (Desktop) */
+.sampul-subtext {
+    position: absolute;
+    top: 341px;
+    left: 300px;
+    width: 668px;
+    height: 117px;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: white;
+    line-height: 38.73px;
+    letter-spacing: 0%;
+}
+
+/* Styling untuk gambar di dalam sampul (Desktop) */
+.sampul-image {
+    position: absolute;
+    top: 214px;
+    left: 1044px;
+    width: 647px;
+    height: 613px;
+}
+
+/* Styling untuk gambar "9 Ribuan" dalam sampul (Desktop) */
+.sampul-price {
+    position: absolute;
+    top: 518px;
+    left: 300px;
+    width: 466.21px;
+    height: 309.18px;
+}
+
+/* Styling untuk div siapa-kami */
+.siapa-kami {
+    position: absolute;
+    top: 1014px;
+    left: 300px;
+    width: 1320px;
+    height: 505px;
+    border: 1px solid transparent;
+    /* Menjaga batas konten tanpa background */
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Styling untuk gambar dalam siapa-kami (Desktop) */
+.siapa-kami-image {
+    width: 570px;
+    height: 505px;
+}
+
+/* Styling untuk teks "Siapa Kami?" */
+.siapa-kami-title {
+    position: absolute;
+    left: 610px;
+    top: 20px;
+    /* Menggeser teks lebih ke atas agar lebih mepet dengan frame */
+    width: 397px;
+    height: 77px;
+    font-family: 'Inter', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 77.45px;
+    color: black;
+}
+
+/* Styling untuk paragraf dalam siapa-kami (Desktop) */
+.siapa-kami-text {
+    position: absolute;
+    left: 610px;
+    top: 120px;
+    width: 710px;
+    height: 272px;
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 33.89px;
+    letter-spacing: 0%;
+    color: black;
+}
+
+/* Styling untuk div kenapa-mesin-kami */
+.kenapa-mesin-kami {
+    position: absolute;
+    top: 1605px;
+    left: 250px;
+    width: 1420px;
+    height: 677px;
+    background-color: #D5F0FB;
+    border-radius: 32px;
+    /* Tambahkan sedikit rounded corner agar lebih smooth */
+}
+
+/* Styling untuk teks "Mengapa harus dengan mesin kami?" (Desktop) */
+.kenapa-mesin-title {
+    position: absolute;
+    left: 131px;
+    top: 50px;
+    width: 1158px;
+    height: 77px;
+    font-family: 'Inter', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 77.45px;
+    letter-spacing: 0%;
+    color: black;
+}
+
+/* Styling umum untuk semua gambar di dalam "Kenapa Mesin Kami" */
+.mesin-gambar {
+    position: absolute;
+    border-radius: 50%;
+    /* Membuat gambar berbentuk lingkaran */
+    object-fit: cover;
+    /* Pastikan gambar tetap proporsional di dalam lingkaran */
+}
+
+/* Styling untuk masing-masing gambar di Desktop */
+.mesin-gambar-1 {
+    width: 256px;
+    height: 256px;
+    top: 177px;
+    left: 133px;
+}
+
+.mesin-gambar-2 {
+    width: 256px;
+    height: 256px;
+    top: 177px;
+    left: 577px;
+}
+
+.mesin-gambar-3 {
+    width: 256px;
+    height: 256px;
+    top: 177px;
+    left: 1027px;
+}
+
+/* Styling umum untuk semua teks dalam "Kenapa Mesin Kami" */
+.mesin-text {
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 33.89px;
+    letter-spacing: 0%;
+    color: black;
+}
+
+/* Styling untuk masing-masing teks di Desktop */
+.mesin-text-1 {
+    width: 300px;
+    height: 34px;
+    top: 453px;
+    left: 132px;
+}
+
+.mesin-text-2 {
+    width: 300px;
+    height: 34px;
+    top: 453px;
+    left: 574px;
+}
+
+.mesin-text-3 {
+    width: 261px;
+    height: 34px;
+    top: 453px;
+    left: 1027px;
+}
+
+/* Styling umum untuk semua paragraf dalam "Kenapa Mesin Kami" */
+.mesin-desc {
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24.2px;
+    letter-spacing: 0%;
+    color: #676767;
+}
+
+/* Styling untuk masing-masing paragraf di Desktop */
+.mesin-desc-1 {
+    width: 388px;
+    height: 72px;
+    top: 495px;
+    left: 50px;
+}
+
+.mesin-desc-2 {
+    width: 399px;
+    height: 72px;
+    top: 495px;
+    left: 503px;
+}
+
+.mesin-desc-3 {
+    width: 400px;
+    height: 96px;
+    top: 495px;
+    left: 957px;
+}
+
+/* Styling untuk div cuci-helm */
+.cuci-helm {
+    position: absolute;
+    top: 2368px;
+    left: 0;
+    width: 100%;
+    height: 744px;
+    background-color: #0092CA;
+}
+
+/* Styling untuk teks "Cuci Helm Tercepat dan Termurah Se-Indonesia!" (Desktop) */
+.cuci-helm-title {
+    position: absolute;
+    left: 300px;
+    top: 116px;
+    width: 628px;
+    height: 231px;
+    font-family: 'Inter', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 77.45px;
+    letter-spacing: 0%;
+    color: white;
+}
+
+/* Styling untuk paragraf dalam "Cuci Helm" (Desktop) */
+.cuci-helm-text {
+    position: absolute;
+    left: 300px;
+    top: 355px;
+    width: 604px;
+    height: 156px;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 38.73px;
+    letter-spacing: 0%;
+    color: white;
+}
+
+/* Styling untuk gambar dalam "Cuci Helm" (Desktop) */
+.cuci-helm-image {
+    position: absolute;
+    left: 1032px;
+    top: 56px;
+    width: 716px;
+    height: 632px;
+}
+
+/* Styling untuk frame dalam "Cuci Helm Box" (Desktop) */
+.cuci-helm-box {
+    position: absolute;
+    left: 300px;
+    top: 560px;
+    width: 648px;
+    height: 62px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 14px 65px 14px 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Efek timbul saat hover */
+.cuci-helm-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 10px 20px rgba(0, 146, 202, 0.3);
+}
+
+/* Efek saat diklik */
+.cuci-helm-box:active {
+    transform: translateY(2px);
+    box-shadow: 0px 6px 12px rgba(0, 146, 202, 0.5);
+}
+
+/* Styling untuk teks dalam "Cuci Helm Box" (Desktop) */
+.cuci-helm-box-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 33.89px;
+    letter-spacing: 0%;
+    color: #0092CA;
+    text-align: center;
+    width: 100%;
+    height: 34px;
+}
+
+/* Styling untuk div peluang-baru */
+.peluang-baru {
+    position: absolute;
+    left: 250px;
+    top: 3198px;
+    width: 1420px;
+    height: 744px;
+    background-color: #0092CA;
+    border-radius: 32px;
+}
+
+/* Styling untuk teks "Bersama Kami, Mewujudkan Peluang Baru" (Desktop) */
+.peluang-baru-title {
+    position: absolute;
+    left: 50px;
+    top: 100px;
+    width: 832px;
+    height: 154px;
+    font-family: 'Inter', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 77.45px;
+    letter-spacing: 0%;
+    color: white;
+}
+
+/* Styling untuk paragraf dalam "Peluang Baru" (Desktop) */
+.peluang-baru-text {
+    position: absolute;
+    left: 50px;
+    top: 262px;
+    width: 881px;
+    height: 117px;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 38.73px;
+    letter-spacing: 0%;
+    color: white;
+}
+
+/* Styling untuk gambar dalam "Peluang Baru" (Desktop) */
+.peluang-baru-image {
+    position: absolute;
+    left: 780px;
+    top: 65px;
+    width: 529px;
+    height: 679px;
+}
+
+/* Styling untuk frame klikable dalam "Peluang Baru" (Desktop) */
+.peluang-baru-box {
+    position: absolute;
+    left: 50px;
+    top: 560px;
+    width: 648px;
+    height: 62px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    border: 3px solid #0092CA;
+    padding: 14px 65px 14px 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Efek timbul saat hover */
+.peluang-baru-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 10px 20px rgba(0, 146, 202, 0.3);
+}
+
+/* Efek saat diklik */
+.peluang-baru-box:active {
+    transform: translateY(2px);
+    box-shadow: 0px 6px 12px rgba(0, 146, 202, 0.5);
+}
+
+/* Styling untuk teks dalam "Peluang Baru Box" */
+.peluang-baru-box-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 33.89px;
+    letter-spacing: 0%;
+    color: #0092CA;
+    text-align: center;
+    width: 100%;
+    height: 34px;
+}
+
+
+/* Responsif untuk Mobile */
+@media screen and (max-width: 768px) {
+    .peluang-baru-box {
+        position: absolute;
+        left: 16px;
+        top: 300px;
+        width: 308px;
+        height: 43px;
+        border-radius: 4px;
+        border: 3px solid #0092CA;
+        padding: 0px;
+        gap: 10px;
+    }
+
+    .peluang-baru-box-text {
+        width: 100%;
+        height: 19px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 19.36px;
+    }
+
+    .peluang-baru-image {
+        position: absolute;
+        left: 82px;
+        top: 347px;
+        width: 248px;
+        height: 318px;
+    }
+
+    .peluang-baru-text {
+        position: absolute;
+        left: 16px;
+        top: 141px;
+        width: 308px;
+        height: 120px;
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24.2px;
+        letter-spacing: 0%;
+    }
+
+    .peluang-baru-title {
+        position: absolute;
+        left: 16px;
+        top: 16px;
+        width: 234px;
+        height: 117px;
+        font-family: 'Inter', sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 38.73px;
+        letter-spacing: 0%;
+    }
+
+    .peluang-baru {
+        position: absolute;
+        left: 20px;
+        top: 3300px;
+        width: 340px;
+        height: 666px;
+    }
+
+    .cuci-helm-box-text {
+        width: 100%;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 19.36px;
+    }
+
+    .cuci-helm-box {
+        position: absolute;
+        left: 26px;
+        top: 590px;
+        width: 308px;
+        height: 60px;
+        border-radius: 4px;
+        padding: 12px 63.5px 12px 63.5px;
+        gap: 10px;
+    }
+
+    .cuci-helm-image {
+        position: absolute;
+        left: 26px;
+        top: 16px;
+        width: 326px;
+        height: 287px;
+    }
+
+    .cuci-helm-text {
+        position: absolute;
+        left: 26px;
+        top: 447px;
+        width: 308px;
+        height: 96px;
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24.2px;
+        letter-spacing: 0%;
+    }
+
+    .cuci-helm-title {
+        position: absolute;
+        left: 26px;
+        top: 322px;
+        width: 308px;
+        height: 117px;
+        font-family: 'Inter', sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 38.73px;
+        letter-spacing: 0%;
+    }
+
+    .cuci-helm {
+        position: absolute;
+        top: 2562px;
+        left: 0;
+        width: 100%;
+        height: 700px;
+    }
+
+    .mesin-desc-1 {
+        width: 308px;
+        height: 57px;
+        top: 362px;
+        left: 16px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.36px;
+    }
+
+    .mesin-desc-2 {
+        width: 308px;
+        height: 76px;
+        top: 642px;
+        left: 16px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.36px;
+    }
+
+    .mesin-desc-3 {
+        width: 308px;
+        height: 76px;
+        top: 941px;
+        left: 16px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.36px;
+    }
+
+    .mesin-text-1 {
+        width: 200px;
+        height: 24px;
+        top: 338px;
+        left: 78px;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24.2px;
+    }
+
+    .mesin-text-2 {
+        width: 200px;
+        height: 24px;
+        top: 618px;
+        left: 78px;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24.2px;
+    }
+
+    .mesin-text-3 {
+        width: 200px;
+        height: 24px;
+        top: 917px;
+        left: 77px;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24.2px;
+    }
+
+    .mesin-gambar-1 {
+        width: 159px;
+        height: 159px;
+        top: 167px;
+        left: 91px;
+    }
+
+    .mesin-gambar-2 {
+        width: 159px;
+        height: 159px;
+        top: 447px;
+        left: 91px;
+    }
+
+    .mesin-gambar-3 {
+        width: 159px;
+        height: 159px;
+        top: 746px;
+        left: 91px;
+    }
+
+    .kenapa-mesin-title {
+        position: absolute;
+        left: 16px;
+        top: 16px;
+        width: 308px;
+        height: 117px;
+        font-family: 'Inter', sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 38.73px;
+        letter-spacing: 0%;
+    }
+
+    .kenapa-mesin-kami {
+        position: absolute;
+        top: 1463px;
+        left: 10px;
+        width: 355px;
+        height: 1049px;
+        border-radius: 10px;
+    }
+
+    .siapa-kami-text {
+        position: absolute;
+        left: 0px;
+        top: 350px;
+        width: 308px;
+        height: 190px;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.36px;
+        letter-spacing: 0%;
+    }
+
+    .siapa-kami-title {
+        position: absolute;
+        left: 0px;
+        top: 300px;
+        width: 218px;
+        height: 39px;
+        font-family: 'Inter', sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 38.73px;
+    }
+
+    .siapa-kami {
+        top: 877px;
+        left: 20px;
+        width: auto;
+        height: auto;
+    }
+
+    .siapa-kami-image {
+        width: 320px;
+        height: 283px;
+    }
+
+    .navbar {
+        width: 100%;
+        /* Sesuai permintaan */
+        height: 70px;
+        /* Sesuai permintaan */
+        top: 1px;
+        /* Sesuai permintaan */
+        left: 50%;
+        transform: translateX(-50%);
+        /* Agar tetap di tengah layar */
+    }
+
+    .sampul-price {
+        top: 570px;
+        left: 26px;
+        width: 308px;
+        height: 179.74px;
+    }
+
+    .sampul {
+        height: 800px;
+        /* Sesuaikan tinggi frame di mode mobile */
+    }
+
+    .sampul-text {
+        top: 80px;
+        left: 26px;
+        width: 308px;
+        height: 78px;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 38.73px;
+        letter-spacing: 0%;
+    }
+
+    .sampul-subtext {
+        top: 164px;
+        left: 26px;
+        width: 308px;
+        height: 72px;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24.2px;
+        letter-spacing: 0%;
+    }
+
+    .sampul-image {
+        top: 320px;
+        left: 50px;
+        width: 259.48px;
+        height: 246px;
+    }
+
+    .nav-container {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1102;
+    }
+
+    .logo img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .menu-toggle {
+        display: block;
+        z-index: 1101;
+    }
+
+    /* NAVBAR MOBILE - Fullscreen */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: url('asset/bg-navbar.png') no-repeat center center/cover;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        padding-top: 140px;
+        z-index: 1100;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+    }
+
+    .nav-links a {
+        font-size: 20px;
+        font-weight: 300;
+        color: white;
+    }
+
+    .nav-links a:hover {
+        color: #ffcc00;
+    }
+
+    .right-menu {
+        display: none;
+    }
+
+    .mobile-contact {
+        display: block !important;
+    }
+
+    /* Styling Mobile Info */
+    .mobile-info {
+        display: none;
+        position: fixed;
+        bottom: -600px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        color: white;
+        z-index: 1101;
+        padding: 20px 10px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .mobile-info h2 {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+
+    .mobile-info p {
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 1.4;
+    }
+
+    /* Ketika Navbar Aktif, Tampilkan Mobile Info */
+    .nav-links.active+.mobile-info {
+        display: block;
+    }
+}
+
+/* Sembunyikan "Hubungi Kami" di desktop dari dalam .nav-links */
+@media screen and (min-width: 769px) {
+    .mobile-contact {
+        display: none !important;
+    }
+
+    .mobile-info {
+        display: none;
+    }
+}
