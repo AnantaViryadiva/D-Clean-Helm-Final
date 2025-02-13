@@ -17,3 +17,31 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    // Ambil semua frame pertanyaan
+    const faqFrames = document.querySelectorAll(".tanya-jawab-frame");
+
+    faqFrames.forEach(frame => {
+        frame.addEventListener("click", function () {
+            // Ambil ikon dalam frame ini
+            const icon = this.querySelector(".toggle-icon");
+
+            // Jika frame yang diklik sudah aktif, tutup dan ubah ikon menjadi +
+            if (this.classList.contains("active")) {
+                this.classList.remove("active");
+                icon.textContent = "+";
+            } else {
+                // Tutup semua frame lain sebelum membuka yang baru
+                faqFrames.forEach(item => {
+                    item.classList.remove("active");
+                    item.querySelector(".toggle-icon").textContent = "+";
+                });
+
+                // Buka frame yang diklik dan ubah ikon menjadi -
+                this.classList.add("active");
+                icon.textContent = "-";
+            }
+        });
+    });
+});
+

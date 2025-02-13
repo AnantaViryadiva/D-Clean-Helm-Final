@@ -530,9 +530,596 @@
     height: 34px;
 }
 
+/* Styling untuk div "Tanya Jawab" */
+.tanya-jawab {
+    position: absolute;
+    left: 250px;
+    top: 4028px;
+    width: 1420px;
+    height: auto;
+}
+
+/* Styling untuk judul "Pertanyaan yang terlintas" */
+.tanya-jawab-title {
+    position: relative;
+    left: 308px;
+    width: 804px;
+    height: 77px;
+    font-family: 'Inter', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 77.45px;
+    letter-spacing: 0%;
+    color: black;
+    margin-bottom: 30px;
+}
+
+/* Container untuk semua frame pertanyaan */
+.tanya-jawab-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Jarak antar frame */
+}
+
+/* Styling untuk setiap frame pertanyaan */
+.tanya-jawab-frame {
+    position: relative;
+    width: 1420px;
+    background: #D5F0FB;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+/* Styling untuk teks pertanyaan */
+.tanya-jawab-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29.05px;
+    letter-spacing: 0%;
+    color: black;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Styling untuk ikon toggle (+/-) */
+.toggle-icon {
+    position: absolute;
+    right: 50px; /* Geser ke kanan sesuai permintaan */
+    top: 25px;
+    width: 30px;
+    height: 30px;
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Styling untuk garis pembatas */
+.tanya-jawab-divider {
+    width: 1320px;
+    height: 1px;
+    background-color: black;
+    margin: 10px 0;
+    display: none; /* Sembunyikan secara default */
+}
+
+/* Styling untuk jawaban */
+.tanya-jawab-answer {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29.05px;
+    letter-spacing: 0%;
+    color: #676767;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    width: 100%; /* Menyesuaikan lebar kontainer */
+    margin-top: 10px; /* Jarak dari garis pembatas */
+}
+
+/* Styling untuk frame yang terbuka */
+.tanya-jawab-frame.active {
+    height: auto;
+}
+
+/* Garis pembatas hanya terlihat saat frame aktif */
+.tanya-jawab-frame.active .tanya-jawab-divider {
+    display: block;
+}
+
+/* Jawaban hanya terlihat saat frame aktif */
+.tanya-jawab-frame.active .tanya-jawab-answer {
+    opacity: 1;
+    max-height: 100px;
+}
+
+/* Styling untuk ikon saat frame aktif (ubah ke -) */
+.tanya-jawab-frame.active .toggle-icon {
+    content: "-";
+}
+
+/* Styling untuk div footer */
+.footer {
+    position: absolute;
+    width: 1420px;
+    height: 404px;
+    top: 4570px;
+    left: 250px;
+    background: url('asset/footer.png') no-repeat center center/cover;
+    border-radius: 32px;
+}
+
+/* Styling untuk logo dalam footer (Desktop) */
+.footer-logo {
+    position: absolute;
+    width: 115px;
+    height: 115px;
+    top: 11px;
+    left: 60px;
+    object-fit: contain;
+}
+
+/* Styling untuk teks "PT Karuna Metta Ananda" di footer (Desktop) */
+.footer-company-name {
+    position: absolute;
+    width: 244px;
+    height: 24px;
+    top: 126px;
+    left: 75px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24.2px;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+}
+
+/* Styling untuk alamat di footer (Desktop) */
+.footer-address {
+    position: absolute;
+    width: 422px;
+    height: 48px;
+    top: 150px;
+    left: 75px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24.2px;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+}
+
+/* Styling untuk teks "Layanan" di footer (Desktop) */
+.layanan {
+    position: absolute;
+    width: 83px;
+    height: 24px;
+    top: 126px;
+    left: 565px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24.2px;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+}
+
+/* Styling untuk teks "Tentang Kami" di footer (Desktop) */
+.tentang-kami {
+    position: absolute;
+    width: 135px;
+    height: 24px;
+    top: 172px;
+    left: 565px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24.2px;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+}
+
+/* Styling untuk teks "Gallery" di footer (Desktop) */
+.gallery {
+    position: absolute;
+    width: 70px;
+    height: 24px;
+    top: 218px;
+    left: 565px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24.2px;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+}
+
+/* Styling untuk teks "Hubungi Kami" di footer (Desktop) */
+.hubungi-kami {
+    position: absolute;
+    width: 137px;
+    height: 24px;
+    top: 126px;
+    left: 768px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24.2px;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+}
+
+/* Styling untuk ikon telepon di footer (Desktop) */
+.phone-icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 158px;
+    left: 768px;
+    object-fit: contain;
+}
+
+/* Styling untuk ikon email di footer (Desktop) */
+.email-icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 190px;
+    left: 768px;
+    object-fit: contain;
+}
+
+/* Styling untuk nomor telepon di footer (Desktop) */
+.footer-phone {
+    position: absolute;
+    width: 187px;
+    height: 24px;
+    top: 158px;
+    left: 797px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24.2px;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: auto;
+    text-decoration-skip-ink: auto;
+}
+
+.footer-email {
+    position: absolute;
+    width: 304px;
+    height: 24px;
+    top: 191px;
+    left: 797px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24.2px;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+    text-decoration: none; /* Hapus garis bawah default */
+}
+
+.footer-email:hover {
+    text-decoration: underline; /* Tampilkan underline saat hover */
+}
+
+/* Styling untuk teks "Sosial Media" di footer (Desktop) */
+.sosial-media {
+    position: absolute;
+    width: 124px;
+    height: 24px;
+    top: 126px;
+    left: 1172px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24.2px;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+}
+
+/* Styling untuk ikon Instagram di footer (Desktop) */
+.instagram-icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 158px;
+    left: 1169px;
+    object-fit: contain;
+}
+
+/* Styling untuk username Instagram di footer (Desktop) */
+.footer-instagram {
+    position: absolute;
+    width: 122px;
+    height: 24px;
+    top: 158px;
+    left: 1198px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24.2px;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: auto;
+    text-decoration-skip-ink: auto;
+}
+
 
 /* Responsif untuk Mobile */
 @media screen and (max-width: 768px) {
+    .sosial-media {
+        width: 99px;
+        height: 19px;
+        top: 340px;
+        left: 26px;
+        font-size: 16px;
+        line-height: 19.36px;
+    }
+
+    .instagram-icon {
+        width: 15px;
+        height: 15px;
+        top: 365px;
+        left: 26px;
+    }
+
+    .footer-instagram {
+        width: 73px;
+        height: 15px;
+        top: 365px;
+        left: 45px;
+        font-size: 12px;
+        line-height: 14.52px;
+    }
+    
+    .footer-email {
+        width: 183px;
+        height: 15px;
+        top: 315px;
+        left: 45px;
+        font-size: 12px;
+        line-height: 14.52px;
+    }
+
+    .footer-phone {
+        width: 112px;
+        height: 15px;
+        top: 290px;
+        left: 45px;
+        font-size: 12px;
+        line-height: 14.52px;
+    }
+
+    .hubungi-kami {
+        width: 110px;
+        height: 19px;
+        top: 265px;
+        left: 26px;
+        font-size: 16px;
+        line-height: 19.36px;
+    }
+
+    .phone-icon {
+        width: 15px;
+        height: 15px;
+        top: 290px;
+        left: 26px;
+    }
+
+    .email-icon {
+        width: 15px;
+        height: 15px;
+        top: 315px;
+        left: 26px;
+    }
+
+    .layanan {
+        width: 66px;
+        height: 19px;
+        top: 160px;
+        left: 26px;
+        font-size: 16px;
+        line-height: 19.36px;
+    }
+
+    .tentang-kami {
+        width: 108px;
+        height: 19px;
+        top: 195px;
+        left: 26px;
+        font-size: 16px;
+        line-height: 19.36px;
+    }
+
+    .gallery {
+        width: 110px;
+        height: 19px;
+        top: 230px;
+        left: 26px;
+        font-size: 16px;
+        line-height: 19.36px;
+    }
+
+    .footer-address {
+        width: 254px;
+        height: 30px;
+        top: 110px;
+        left: 26px;
+        font-size: 12px;
+        line-height: 14.52px;
+    }
+
+    .footer-company-name {
+        width: 195px;
+        height: 19px;
+        top: 90px;
+        left: 26px;
+        font-size: 16px;
+        line-height: 19.36px;
+    }
+
+    .footer-logo {
+        width: 80px;
+        height: 80px;
+        left: 26px;
+    }
+
+    .footer {
+        width: 100%;
+        height: 450px;
+        top: 4250px;
+        left: 0; /* Pastikan berada di tengah layar */
+        border-radius: 0px; /* Opsional, bisa dihapus jika ingin tetap berbentuk */
+    }
+
+    /* Styling untuk div "Tanya Jawab" pada mode mobile */
+.tanya-jawab {
+    position: absolute;
+    left: 10px;
+    width: 340px;
+    height: auto;
+    display: block;
+}
+
+/* Menyembunyikan H2 di mode mobile */
+.tanya-jawab-title {
+    display: none;
+}
+
+/* Container untuk semua frame pertanyaan */
+.tanya-jawab-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Styling untuk setiap frame pertanyaan */
+.tanya-jawab-frame {
+    position: relative;
+    width: 340px;
+    height: 38px; /* Ukuran frame sebelum dibuka */
+    min-height: 38px; /* Menjamin frame tidak mengecil */
+    background: #D5F0FB;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+/* Styling untuk teks pertanyaan */
+.tanya-jawab-text {
+    width: 249px;
+    height: 17px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px; /* Ukuran font lebih kecil untuk mobile */
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0%;
+    color: black;
+    position: absolute;
+    top: 11px;
+    left: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+/* Styling untuk ikon toggle (+/-) pada mode mobile */
+.toggle-icon {
+    position: absolute;
+    top: 12px; /* Posisi atas */
+    left: 316px; /* Posisi kiri */
+    width: 14px; /* Lebar ikon */
+    height: 14px; /* Tinggi ikon */
+    font-size: 14px; /* Ukuran font lebih kecil untuk mobile */
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    line-height: 14px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Styling untuk garis pembatas pada mode mobile */
+.tanya-jawab-divider {
+    width: 320px;
+    height: 1px;
+    background-color: black;
+    margin: 5px 0;
+    position: absolute;
+    top: 40px; /* Posisi dari atas frame */
+    left: 10px;
+    border-width: 0.75px; /* Lebar garis */
+    display: none; /* Sembunyikan secara default */
+}
+
+/* Styling untuk jawaban di mode mobile */
+.tanya-jawab-answer {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0%;
+    color: #676767;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    width: 320px; /* Menyesuaikan lebar kontainer */
+    height: 85px; /* Ukuran teks jawaban */
+    position: absolute;
+    top: 50px; /* Posisi teks jawaban */
+    left: 10px;
+}
+
+/* Menjaga frame tetap besar meskipun jawaban tidak terbuka */
+.tanya-jawab-frame.active {
+    min-height: 140px; /* Menjamin frame memiliki ukuran cukup untuk jawaban */
+    height: auto; /* Ukuran otomatis */
+}
+
+/* Garis pembatas hanya terlihat saat frame aktif */
+.tanya-jawab-frame.active .tanya-jawab-divider {
+    display: block;
+}
+
+/* Jawaban hanya terlihat saat frame aktif */
+.tanya-jawab-frame.active .tanya-jawab-answer {
+    opacity: 1;
+    max-height: 100px;
+}
+
+/* Styling untuk ikon saat frame aktif (ubah ke -) */
+.tanya-jawab-frame.active .toggle-icon {
+    content: "-";
+}
+
     .peluang-baru-box {
         position: absolute;
         left: 16px;
