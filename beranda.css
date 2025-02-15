@@ -1232,8 +1232,9 @@
     /* Styling untuk div "Tanya Jawab" pada mode mobile */
 .tanya-jawab {
     position: absolute;
-    left: 10px;
-    width: 340px;
+    left: 50%; /* Pusatkan elemen ke tengah */
+    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
+    width: 380px;
     height: auto;
     display: block;
 }
@@ -1254,7 +1255,7 @@
 /* Styling untuk setiap frame pertanyaan */
 .tanya-jawab-frame {
     position: relative;
-    width: 340px;
+    width: 380px;
     height: 38px; /* Ukuran frame sebelum dibuka */
     min-height: 38px; /* Menjamin frame tidak mengecil */
     background: #D5F0FB;
@@ -1290,7 +1291,7 @@
 .toggle-icon {
     position: absolute;
     top: 12px; /* Posisi atas */
-    left: 316px; /* Posisi kiri */
+    left: 330px; /* Posisi kiri */
     width: 14px; /* Lebar ikon */
     height: 14px; /* Tinggi ikon */
     font-size: 14px; /* Ukuran font lebih kecil untuk mobile */
@@ -1304,7 +1305,7 @@
 
 /* Styling untuk garis pembatas pada mode mobile */
 .tanya-jawab-divider {
-    width: 320px;
+    width: 340px;
     height: 1px;
     background-color: black;
     margin: 5px 0;
@@ -1412,9 +1413,10 @@
 
     .peluang-baru {
         position: absolute;
-        left: 20px;
+        left: 50%; /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
         top: 3300px;
-        width: 340px;
+        width: 400px;
         height: 666px;
     }
 
@@ -1427,18 +1429,18 @@
 
     .cuci-helm-box {
         position: absolute;
-        left: 26px;
+        left: 50%; /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
         top: 590px;
-        width: 308px;
+        width: 350px;
         height: 60px;
         border-radius: 4px;
-        padding: 12px 63.5px 12px 63.5px;
-        gap: 10px;
     }
 
     .cuci-helm-image {
         position: absolute;
-        left: 26px;
+        left: 50%; /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
         top: 16px;
         width: 326px;
         height: 287px;
@@ -1446,9 +1448,10 @@
 
     .cuci-helm-text {
         position: absolute;
-        left: 26px;
+        left: 50%; /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
         top: 447px;
-        width: 308px;
+        width: 350px;
         height: 96px;
         font-family: 'Inter', sans-serif;
         font-size: 20px;
@@ -1459,9 +1462,10 @@
 
     .cuci-helm-title {
         position: absolute;
-        left: 26px;
+        left: 50%; /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
         top: 322px;
-        width: 308px;
+        width: 350px;
         height: 117px;
         font-family: 'Inter', sans-serif;
         font-size: 32px;
@@ -1482,7 +1486,8 @@
         width: 308px;
         height: 57px;
         top: 362px;
-        left: 16px;
+    left: 50%; /* Pusatkan elemen ke tengah */
+    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
         font-size: 16px;
         font-weight: 400;
         line-height: 19.36px;
@@ -1492,7 +1497,8 @@
         width: 308px;
         height: 76px;
         top: 642px;
-        left: 16px;
+    left: 50%; /* Pusatkan elemen ke tengah */
+    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
         font-size: 16px;
         font-weight: 400;
         line-height: 19.36px;
@@ -1502,7 +1508,8 @@
         width: 308px;
         height: 76px;
         top: 941px;
-        left: 16px;
+    left: 50%; /* Pusatkan elemen ke tengah */
+    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
         font-size: 16px;
         font-weight: 400;
         line-height: 19.36px;
@@ -1512,7 +1519,8 @@
         width: 200px;
         height: 24px;
         top: 338px;
-        left: 78px;
+        left: 50%; /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
         font-size: 20px;
         font-weight: 600;
         line-height: 24.2px;
@@ -1522,7 +1530,8 @@
         width: 200px;
         height: 24px;
         top: 618px;
-        left: 78px;
+        left: 50%; /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
         font-size: 20px;
         font-weight: 600;
         line-height: 24.2px;
@@ -1532,7 +1541,8 @@
         width: 200px;
         height: 24px;
         top: 917px;
-        left: 77px;
+        left: 50%; /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
         font-size: 20px;
         font-weight: 600;
         line-height: 24.2px;
@@ -1542,21 +1552,24 @@
         width: 159px;
         height: 159px;
         top: 167px;
-        left: 91px;
+    left: 50%; /* Pusatkan elemen ke tengah */
+    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
     }
 
     .mesin-gambar-2 {
         width: 159px;
         height: 159px;
         top: 447px;
-        left: 91px;
+    left: 50%; /* Pusatkan elemen ke tengah */
+    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
     }
 
     .mesin-gambar-3 {
         width: 159px;
         height: 159px;
         top: 746px;
-        left: 91px;
+    left: 50%; /* Pusatkan elemen ke tengah */
+    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
     }
 
     .kenapa-mesin-title {
@@ -1575,8 +1588,9 @@
     .kenapa-mesin-kami {
         position: absolute;
         top: 1463px;
-        left: 10px;
-        width: 355px;
+        left: 50%; /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
+        width: 400px;
         height: 1049px;
         border-radius: 10px;
     }
@@ -1584,8 +1598,9 @@
 /* Pastikan elemen tidak melebihi viewport */
 .siapa-kami {
     position: relative;
-    top: 877px;
-    left: 0px; /* Ubah dari 20px ke 0px */
+    top: 820px;
+    left: 50%; /* Pusatkan elemen ke tengah */
+    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
     width: 100%; /* Pastikan elemen tidak lebih dari viewport */
     max-width: 100%;
     height: auto;
@@ -1594,23 +1609,26 @@
 /* Pastikan teks tidak menyebabkan overflow */
 .siapa-kami-text {
     position: absolute;
-    left: 26px;
-    top: 350px;
+    left: 50%; /* Pusatkan elemen ke tengah */
+    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
+    top: 400px;
     width: 100%;
-    max-width: 308px; /* Batas maksimal sesuai desain */
+    max-width: 370px; /* Batas maksimal sesuai desain */
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 19.36px;
     letter-spacing: 0%;
     word-wrap: break-word;
+    color: #676767;
 }
 
 /* Pastikan judul tidak menyebabkan overflow */
 .siapa-kami-title {
     position: absolute;
-    left: 26px;
-    top: 300px;
+    left: 32%; /* Pusatkan elemen ke tengah */
+    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
+    top: 350px;
     width: 100%;
     max-width: 218px;
     font-family: 'Inter', sans-serif;
@@ -1622,7 +1640,7 @@
 /* Pastikan gambar tidak menyebabkan overflow */
 .siapa-kami-image {
     width: 100%;
-    max-width: 320px; /* Batasi agar tidak lebih besar dari desain */
+    max-width: 380px; /* Batasi agar tidak lebih besar dari desain */
     height: auto;
     display: block;
     margin: 0 auto; /* Pastikan tetap di tengah */
@@ -1642,7 +1660,8 @@
 
     .sampul-price {
         top: 570px;
-        left: 26px;
+        left: 50%; /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
         width: 308px;
         height: 179.74px;
     }
@@ -1654,8 +1673,9 @@
 
     .sampul-text {
         top: 80px;
-        left: 26px;
-        width: 308px;
+        left: 50%; /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
+        width: 350px;
         height: 78px;
         font-size: 32px;
         font-weight: 700;
@@ -1665,8 +1685,9 @@
 
     .sampul-subtext {
         top: 164px;
-        left: 26px;
-        width: 308px;
+        left: 50%; /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
+        width: 350px;
         height: 72px;
         font-size: 20px;
         font-weight: 400;
@@ -1676,8 +1697,9 @@
 
     .sampul-image {
         top: 320px;
-        left: 50px;
-        width: 259.48px;
+        left: 50%; /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
+        width: 300px;
         height: 246px;
     }
 
