@@ -1654,8 +1654,9 @@
 /* Pastikan elemen tidak melebihi viewport */
 .siapa-kami {
     position: relative;
-    top: 877px;
-    left: 0px; /* Ubah dari 20px ke 0px */
+    top: 820px;
+    left: 50%; /* Pusatkan elemen ke tengah */
+    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
     width: 100%; /* Pastikan elemen tidak lebih dari viewport */
     max-width: 100%;
     height: auto;
@@ -1664,7 +1665,8 @@
 /* Pastikan teks tidak menyebabkan overflow */
 .siapa-kami-text {
     position: absolute;
-    left: 26px;
+    left: 50%; /* Pusatkan elemen ke tengah */
+    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
     top: 350px;
     width: 100%;
     max-width: 308px; /* Batas maksimal sesuai desain */
@@ -1674,15 +1676,17 @@
     line-height: 19.36px;
     letter-spacing: 0%;
     word-wrap: break-word;
+    color: #676767;
 }
 
 /* Pastikan judul tidak menyebabkan overflow */
 .siapa-kami-title {
     position: absolute;
-    left: 26px;
+    left: 50%; /* Pusatkan elemen ke tengah */
+    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
     top: 300px;
     width: 100%;
-    max-width: 218px;
+    max-width: 308px;
     font-family: 'Inter', sans-serif;
     font-size: 32px;
     font-weight: 700;

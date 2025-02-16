@@ -18,15 +18,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 document.addEventListener("DOMContentLoaded", function () {
-    // Ambil semua frame pertanyaan
     const faqFrames = document.querySelectorAll(".tanya-jawab-frame");
+    const faqContainer = document.querySelector(".tanya-jawab"); // Container utama
+    const footer = document.querySelector(".footer"); // Footer
+    const defaultFooterMarginTop = 30; // Jarak default footer dari tanya-jawab dalam px
 
     faqFrames.forEach(frame => {
         frame.addEventListener("click", function () {
-            // Ambil ikon dalam frame ini
             const icon = this.querySelector(".toggle-icon");
 
-            // Jika frame yang diklik sudah aktif, tutup dan ubah ikon menjadi +
             if (this.classList.contains("active")) {
                 this.classList.remove("active");
                 icon.textContent = "+";
@@ -37,11 +37,36 @@ document.addEventListener("DOMContentLoaded", function () {
                     item.querySelector(".toggle-icon").textContent = "+";
                 });
 
-                // Buka frame yang diklik dan ubah ikon menjadi -
+                // Buka frame yang diklik
                 this.classList.add("active");
                 icon.textContent = "-";
             }
+
+            // Update posisi footer dengan animasi
+            setTimeout(() => {
+                smoothAdjustFooterPosition();
+            }, 300); // Tunggu animasi transisi FAQ selesai
         });
     });
+
+    function smoothAdjustFooterPosition() {
+        let totalFaqHeight = 0;
+        let isAnyActive = false;
+
+        faqFrames.forEach(frame => {
+            totalFaqHeight += frame.offsetHeight + 10; // Hitung tinggi setiap frame dengan margin
+            if (frame.classList.contains("active")) {
+                isAnyActive = true;
+            }
+        });
+
+        let extraHeight = isAnyActive ? totalFaqHeight - (faqFrames.length * 48) : 0;
+        let newMarginTop = extraHeight > 0 ? extraHeight + defaultFooterMarginTop : defaultFooterMarginTop;
+
+        // Animasi perubahan margin-top menggunakan transisi CSS
+        requestAnimationFrame(() => {
+            footer.style.marginTop = `${newMarginTop}px`;
+        });
+    }
 });
 
