@@ -1645,9 +1645,10 @@
 
     .kenapa-mesin-kami {
         position: absolute;
-        top: 1520px;
-        left: 10px;
-        width: 355px;
+        top: 1450px;
+        left: 50%; /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
+        width: 370px;
         height: 1049px;
         border-radius: 10px;
     }
