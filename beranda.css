@@ -1416,7 +1416,7 @@
         left: 50%; /* Pusatkan elemen ke tengah */
         transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
         top: 3300px;
-        width: 400px;
+        width: 340px;
         height: 666px;
     }
 
@@ -1590,7 +1590,7 @@
         top: 1463px;
         left: 50%; /* Pusatkan elemen ke tengah */
         transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
-        width: 400px;
+        width: 370px;
         height: 1049px;
         border-radius: 10px;
     }
@@ -1611,9 +1611,9 @@
     position: absolute;
     left: 50%; /* Pusatkan elemen ke tengah */
     transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
-    top: 400px;
+    top: 350px;
     width: 100%;
-    max-width: 370px; /* Batas maksimal sesuai desain */
+    max-width: 308px; /* Batas maksimal sesuai desain */
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -1626,11 +1626,11 @@
 /* Pastikan judul tidak menyebabkan overflow */
 .siapa-kami-title {
     position: absolute;
-    left: 32%; /* Pusatkan elemen ke tengah */
+    left: 50%; /* Pusatkan elemen ke tengah */
     transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
-    top: 350px;
+    top: 300px;
     width: 100%;
-    max-width: 218px;
+    max-width: 308px;
     font-family: 'Inter', sans-serif;
     font-size: 32px;
     font-weight: 700;
@@ -1640,7 +1640,7 @@
 /* Pastikan gambar tidak menyebabkan overflow */
 .siapa-kami-image {
     width: 100%;
-    max-width: 380px; /* Batasi agar tidak lebih besar dari desain */
+    max-width: 320px; /* Batasi agar tidak lebih besar dari desain */
     height: auto;
     display: block;
     margin: 0 auto; /* Pastikan tetap di tengah */
