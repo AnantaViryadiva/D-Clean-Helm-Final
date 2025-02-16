@@ -69,4 +69,29 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+document.addEventListener("DOMContentLoaded", function () {
+    var swiper = new Swiper(".swiper-container", {
+        loop: true,
+        centeredSlides: true,
+        slidesPerView: 1, // Pastikan hanya satu slide yang muncul dalam satu waktu
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        effect: "slide",
+        lazy: true,
+    });
+});
+
+
+
+
 

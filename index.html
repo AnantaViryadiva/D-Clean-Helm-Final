@@ -7,6 +7,12 @@
     <title>Navbar Responsif</title>
     <link rel="stylesheet" href="beranda.css">
     <script defer src="beranda.js"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- Swiper JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 </head>
 
 <body>
@@ -37,17 +43,46 @@
         </div>
     </nav>
 
-    <!-- Frame Sampul -->
+    <!-- Wrapper untuk Carousel -->
     <div class="sampul">
-        <h2 class="sampul-text">Bersih Maksimal,<br>Harga Minimal</h2>
-        <p class="sampul-subtext">
-            Dengan teknologi modern, D'Clean Helm
-            memberikan solusi terbaik untuk perawatan
-            helm Anda tanpa perlu menguras kantong
-        </p>
-        <img src="asset/helmet.png" alt="Helmet" class="sampul-image">
-        <img src="asset/9ribuan-removebg-preview.png" alt="9 Ribuan" class="sampul-price">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Sampul 1 -->
+                <div class="swiper-slide">
+                    <div class="sampul1">
+                        <h2 class="sampul-text">Bersih Maksimal,<br>Harga Minimal</h2>
+                        <p class="sampul-subtext">
+                            Dengan teknologi modern, D'Clean Helm memberikan solusi terbaik untuk perawatan helm Anda
+                            tanpa perlu menguras kantong.
+                        </p>
+                        <img src="asset/helmet.png" alt="Helmet" class="sampul-image">
+                        <img src="asset/9ribuan-removebg-preview.png" alt="9 Ribuan" class="sampul-price">
+                    </div>
+                </div>
+
+                <!-- Sampul 2 -->
+                <div class="swiper-slide">
+                    <div class="sampul2">
+                        <h2 class="sampul-text">Cuci Helm Tercepat dan Termurah<br>Se-Indonesia!</h2>
+                        <p class="sampul-subtext">
+                            Rasakan pengalaman mencuci helm bersih, wangi, dan higienis dalam hitungan menit dengan
+                            harga paling hemat se-Indonesia.
+                        </p>
+                        <img src="asset/helmet3.png" alt="Helmet" class="sampul-image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tombol Navigasi -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- Pagination Bullets -->
+            <div class="swiper-pagination"></div>
+        </div>
     </div>
+
+
 
     <!-- Siapa Kami Section -->
     <div class="siapa-kami">
@@ -124,64 +159,69 @@
     </div>
 
     <!-- Tanya Jawab Section -->
-<div class="tanya-jawab">
-    <h2 class="tanya-jawab-title">Pertanyaan yang terlintas</h2>
+    <div class="tanya-jawab">
+        <h2 class="tanya-jawab-title">Pertanyaan yang terlintas</h2>
 
-    <!-- Container untuk semua frame -->
-    <div class="tanya-jawab-container">
-        <div class="tanya-jawab-frame" onclick="toggleAnswer(this)">
-            <p class="tanya-jawab-text">Apa keuntungan bergabung dengan D'Clean?</p>
-            <span class="toggle-icon">+</span>
-            <div class="tanya-jawab-divider"></div>
-            <p class="tanya-jawab-answer">Keuntungan bergabung adalah mendapatkan peluang bisnis yang menguntungkan dengan sistem yang sudah terbukti.</p>
-        </div>
-        <div class="tanya-jawab-frame" onclick="toggleAnswer(this)">
-            <p class="tanya-jawab-text">Bagaimana cara menjadi partner?</p>
-            <span class="toggle-icon">+</span>
-            <div class="tanya-jawab-divider"></div>
-            <p class="tanya-jawab-answer">Anda dapat menjadi partner dengan menghubungi tim kami dan memenuhi syarat yang telah ditentukan.</p>
-        </div>
-        <div class="tanya-jawab-frame" onclick="toggleAnswer(this)">
-            <p class="tanya-jawab-text">Berapa biaya untuk memulai bisnis ini?</p>
-            <span class="toggle-icon">+</span>
-            <div class="tanya-jawab-divider"></div>
-            <p class="tanya-jawab-answer">Biaya bergantung pada paket yang Anda pilih, silakan hubungi kami untuk informasi lebih lanjut.</p>
-        </div>
-        <div class="tanya-jawab-frame" onclick="toggleAnswer(this)">
-            <p class="tanya-jawab-text">Apakah ada dukungan pemasaran dari D'Clean?</p>
-            <span class="toggle-icon">+</span>
-            <div class="tanya-jawab-divider"></div>
-            <p class="tanya-jawab-answer">Ya, kami menyediakan dukungan pemasaran untuk membantu Anda mengembangkan bisnis.</p>
+        <!-- Container untuk semua frame -->
+        <div class="tanya-jawab-container">
+            <div class="tanya-jawab-frame" onclick="toggleAnswer(this)">
+                <p class="tanya-jawab-text">Apakah semua jenis helm bisa dicuci?</p>
+                <span class="toggle-icon">+</span>
+                <div class="tanya-jawab-divider"></div>
+                <p class="tanya-jawab-answer">Ya, mesin D'Clean Helm dirancang untuk semua jenis helm, mulai dari helm
+                    half-face, full-face, hingga modular, tanpa merusak bahan atau komponen helm.</p>
+            </div>
+            <div class="tanya-jawab-frame" onclick="toggleAnswer(this)">
+                <p class="tanya-jawab-text">Apakah helm akan benar-benar kering setelah dicuci?</p>
+                <span class="toggle-icon">+</span>
+                <div class="tanya-jawab-divider"></div>
+                <p class="tanya-jawab-answer">Ya, dengan teknologi ThermoDry Heat, helm Anda akan kering sempurna dan
+                    siap langsung digunakan.</p>
+            </div>
+            <div class="tanya-jawab-frame" onclick="toggleAnswer(this)">
+                <p class="tanya-jawab-text">Apakah helm saya akan rusak jika dicuci menggunakan mesin ini?</p>
+                <span class="toggle-icon">+</span>
+                <div class="tanya-jawab-divider"></div>
+                <p class="tanya-jawab-answer">Tidak, mesin D'Clean Helm dirancang khusus untuk menjaga helm tetap aman.
+                    Teknologi yang digunakan telah diuji untuk memastikan tidak ada kerusakan pada busa, visor, atau
+                    bagian helm lainnya.</p>
+            </div>
+            <div class="tanya-jawab-frame" onclick="toggleAnswer(this)">
+                <p class="tanya-jawab-text">Di mana saya bisa menemukan mesin D'Clean Helm?</p>
+                <span class="toggle-icon">+</span>
+                <div class="tanya-jawab-divider"></div>
+                <p class="tanya-jawab-answer">Untuk saat ini kamu dapat menemukan mesin D'Clean Helm di berbagai lokasi
+                    strategis seperti area parkir, depan minimarket, dan sekitar kampus</p>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="footer">
-    <img src="asset/logo-nbs.png" alt="Logo NBS" class="footer-logo">
-    <p class="footer-company-name">PT Karuna Metta Ananda</p>
-    <p class="footer-address">
-        Jl. Sakura no 57, Cluster Sakura, Modernland<br>
-        Kota Tangerang, Banten.
-    </p>
-    
-    <!-- Menu Footer -->
-    <p class="footer-menu layanan">Layanan</p>
-    <p class="footer-menu tentang-kami">Tentang Kami</p>
-    <p class="footer-menu gallery">Gallery</p>
+    <div class="footer">
+        <img src="asset/logo-nbs.png" alt="Logo NBS" class="footer-logo">
+        <p class="footer-company-name">PT Karuna Metta Ananda</p>
+        <p class="footer-address">
+            Jl. Sakura no 57, Cluster Sakura, Modernland<br>
+            Kota Tangerang, Banten.
+        </p>
 
-    <!-- Hubungi Kami -->
-    <p class="footer-menu hubungi-kami">Hubungi Kami</p>
-    <img src="asset/Phone.png" alt="Phone Icon" class="footer-icon phone-icon">
-    <a href="https://wa.me/6285711851387" target="_blank" class="footer-phone">+62 857-1185-1387</a>
-    
-    <img src="asset/Email.png" alt="Email Icon" class="footer-icon email-icon">
-    <a href="mailto:karunamettaananda@gmail.com" class="footer-email">karunamettaananda@gmail.com</a>
+        <!-- Menu Footer -->
+        <p class="footer-menu layanan">Layanan</p>
+        <p class="footer-menu tentang-kami">Tentang Kami</p>
+        <p class="footer-menu gallery">Gallery</p>
 
-    <!-- Sosial Media -->
-    <p class="footer-menu sosial-media">Sosial Media</p>
-    <img src="asset/Instagram.png" alt="Instagram Icon" class="footer-icon instagram-icon">
-    <a href="https://www.instagram.com/dclean_helm/" target="_blank" class="footer-instagram">@Dclean_helm</a>
-</div>
+        <!-- Hubungi Kami -->
+        <p class="footer-menu hubungi-kami">Hubungi Kami</p>
+        <img src="asset/Phone.png" alt="Phone Icon" class="footer-icon phone-icon">
+        <a href="https://wa.me/6285711851387" target="_blank" class="footer-phone">+62 857-1185-1387</a>
+
+        <img src="asset/Email.png" alt="Email Icon" class="footer-icon email-icon">
+        <a href="mailto:karunamettaananda@gmail.com" class="footer-email">karunamettaananda@gmail.com</a>
+
+        <!-- Sosial Media -->
+        <p class="footer-menu sosial-media">Sosial Media</p>
+        <img src="asset/Instagram.png" alt="Instagram Icon" class="footer-icon instagram-icon">
+        <a href="https://www.instagram.com/dclean_helm/" target="_blank" class="footer-instagram">@Dclean_helm</a>
+    </div>
 
 </body>
 

@@ -107,22 +107,22 @@
 }
 
 /* Styling untuk div sampul */
-/* Styling untuk div sampul */
 .sampul {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    /* Responsif di semua layar */
-    height: 928px;
-    /* Default untuk desktop */
+    height: 928px; /* Default untuk desktop */
     background: linear-gradient(to right, #00AED6, #0092CA);
-    z-index: -1;
-    /* Menempatkan frame di belakang navbar */
+    z-index: -1; /* Menempatkan frame di belakang navbar */
 }
 
-/* Styling untuk teks dalam sampul (Desktop) */
-.sampul-text {
+/* =========================================== */
+/* SAMPUL 1 */
+/* =========================================== */
+
+/* Styling untuk teks dalam sampul1 (Desktop) */
+.sampul1 .sampul-text {
     position: absolute;
     top: 179px;
     left: 300px;
@@ -135,8 +135,8 @@
     line-height: 1.2;
 }
 
-/* Styling untuk paragraf dalam sampul (Desktop) */
-.sampul-subtext {
+/* Styling untuk paragraf dalam sampul1 (Desktop) */
+.sampul1 .sampul-subtext {
     position: absolute;
     top: 341px;
     left: 300px;
@@ -150,8 +150,8 @@
     letter-spacing: 0%;
 }
 
-/* Styling untuk gambar di dalam sampul (Desktop) */
-.sampul-image {
+/* Styling untuk gambar di dalam sampul1 (Desktop) */
+.sampul1 .sampul-image {
     position: absolute;
     top: 214px;
     left: 1044px;
@@ -159,14 +159,58 @@
     height: 613px;
 }
 
-/* Styling untuk gambar "9 Ribuan" dalam sampul (Desktop) */
-.sampul-price {
+/* Styling untuk gambar "9 Ribuan" dalam sampul1 (Desktop) */
+.sampul1 .sampul-price {
     position: absolute;
     top: 518px;
     left: 300px;
     width: 466.21px;
     height: 309.18px;
 }
+
+/* =========================================== */
+/* SAMPUL 2 */
+/* =========================================== */
+
+/* Styling untuk teks dalam sampul2 (Desktop) */
+.sampul2 .sampul-text {
+    position: absolute;
+    top: 250px;
+    left: 300px;
+    width: 600px;
+    height: 154px;
+    font-family: 'Inter', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    color: white;
+    line-height: 1.2;
+}
+
+/* Styling untuk paragraf dalam sampul2 (Desktop) */
+.sampul2 .sampul-subtext {
+    position: absolute;
+    top: 497px;
+    left: 300px;
+    width: 543px;
+    height: 117px;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: white;
+    line-height: 38.73px;
+    letter-spacing: 0%;
+}
+
+/* Styling untuk gambar di dalam sampul2 (Desktop) */
+.sampul2 .sampul-image {
+    position: absolute;
+    top: 214px;
+    left: 1044px;
+    width: 647px;
+    height: 613px;
+}
+
+
 
 /* Styling untuk div siapa-kami */
 .siapa-kami {
@@ -654,6 +698,7 @@
 
 /* Styling untuk div footer */
 .footer {
+    transition: margin-top 0.4s ease-in-out; /* Efek transisi smooth */
     position: absolute;
     width: 1420px;
     height: 404px;
@@ -991,6 +1036,7 @@
     letter-spacing: 0%;
     color: #676767;
 }
+
 
 
 /* Responsif untuk Mobile */
@@ -1659,50 +1705,70 @@
         /* Agar tetap di tengah layar */
     }
 
-    .sampul-price {
-        top: 570px;
-        left: 50%; /* Pusatkan elemen ke tengah */
-        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
-        width: 308px;
-        height: 179.74px;
-    }
+/* Styling untuk wrapper carousel */
+.sampul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 800px; /* Tetap sesuai dengan desain mobile */
+    background: linear-gradient(to right, #00AED6, #0092CA);
+    z-index: -1;
+    overflow: hidden; /* Mencegah overflow ke kanan */
+}
 
-    .sampul {
-        height: 800px;
-        /* Sesuaikan tinggi frame di mode mobile */
-    }
+/* Swiper Container */
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
 
-    .sampul-text {
-        top: 80px;
-        left: 50%; /* Pusatkan elemen ke tengah */
-        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
-        width: 350px;
-        height: 78px;
-        font-size: 32px;
-        font-weight: 700;
-        line-height: 38.73px;
-        letter-spacing: 0%;
-    }
+/* Styling untuk setiap slide */
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
 
-    .sampul-subtext {
-        top: 164px;
-        left: 50%; /* Pusatkan elemen ke tengah */
-        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
-        width: 350px;
-        height: 72px;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 24.2px;
-        letter-spacing: 0%;
-    }
+/* Gunakan kembali styling yang ada tanpa mengubah posisi & ukuran */
+/* Sampul 1 */
+.sampul1 .sampul-text, 
+.sampul2 .sampul-text {
+    position: absolute;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38.73px;
+    letter-spacing: 0%;
+}
 
-    .sampul-image {
-        top: 320px;
-        left: 50%; /* Pusatkan elemen ke tengah */
-        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
-        width: 300px;
-        height: 246px;
-    }
+.sampul1 .sampul-subtext, 
+.sampul2 .sampul-subtext {
+    position: absolute;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24.2px;
+    letter-spacing: 0%;
+}
+
+/* Posisi elemen Sampul 1 */
+.sampul1 .sampul-text { top: 80px; left: 50%; transform: translateX(-50%); width: 350px; height: 78px; }
+.sampul1 .sampul-subtext { top: 164px; left: 50%; transform: translateX(-50%); width: 350px; height: 72px; }
+.sampul1 .sampul-image { top: 320px; left: 50%; transform: translateX(-50%); width: 300px; height: 246px; }
+.sampul1 .sampul-price { top: 570px; left: 50%; transform: translateX(-50%); width: 308px; height: 179.74px; }
+
+/* Posisi elemen Sampul 2 */
+.sampul2 .sampul-text { top: 106px; left: 26px; width: 308px; height: 78px; }
+.sampul2 .sampul-subtext { top: 223px; left: 26px; width: 308px; height: 72px; }
+.sampul2 .sampul-image { top: 379px; left: 50px; width: 259.48px; height: 246px; }
+
+/* Styling Pagination */
+.swiper-pagination {
+    bottom: 10px;
+    text-align: center;
+}
+
 
     .nav-container {
         width: 100%;
