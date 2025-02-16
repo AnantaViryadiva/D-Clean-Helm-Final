@@ -1040,7 +1040,8 @@
     width: 308px;
     height: auto; /* Biarkan tinggi menyesuaikan dengan isi */
     top: 564px;
-    left: 26px;
+    left: 50%; /* Pusatkan elemen ke tengah */
+    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
     border-radius: 4px;
     border-width: 3px;
     padding: 12px 20px; /* Kurangi padding kanan-kiri agar teks lebih pas */
