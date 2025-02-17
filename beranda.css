@@ -177,7 +177,7 @@
     position: absolute;
     top: 250px;
     left: 300px;
-    width: 600px;
+    width: 800px;
     height: 154px;
     font-family: 'Inter', sans-serif;
     font-size: 64px;
@@ -191,7 +191,7 @@
     position: absolute;
     top: 497px;
     left: 300px;
-    width: 543px;
+    width: 700px;
     height: 117px;
     font-family: 'Inter', sans-serif;
     font-size: 32px;
@@ -1760,8 +1760,8 @@
 
 /* Posisi elemen Sampul 2 */
 .sampul2 .sampul-text { top: 106px; left: 26px; width: 308px; height: 78px; }
-.sampul2 .sampul-subtext { top: 223px; left: 26px; width: 308px; height: 72px; }
-.sampul2 .sampul-image { top: 379px; left: 50px; width: 259.48px; height: 246px; }
+.sampul2 .sampul-subtext { top: 280px; left: 26px; width: 308px; height: 72px; }
+.sampul2 .sampul-image { top: 400px; left: 50px; width: 259.48px; height: 246px; }
 
 /* Styling Pagination */
 .swiper-pagination {
