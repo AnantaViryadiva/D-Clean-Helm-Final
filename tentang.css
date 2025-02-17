@@ -126,7 +126,7 @@
     position: absolute;
     top: 250px;
     left: 300px;
-    width: 600px;
+    width: 800px;
     height: 154px;
     font-family: 'Inter', sans-serif;
     font-size: 64px;
@@ -140,7 +140,7 @@
     position: absolute;
     top: 497px;
     left: 300px;
-    width: 543px;
+    width: 700px;
     height: 117px;
     font-family: 'Inter', sans-serif;
     font-size: 32px;
@@ -1694,7 +1694,7 @@
     }
 
     .sampul-subtext {
-        top: 223px;
+        top: 280px;
         left: 26px;
         width: 308px;
         height: 72px;
@@ -1705,7 +1705,7 @@
     }
 
     .sampul-image {
-        top: 379px;
+        top: 400px;
         left: 50px;
         width: 259.48px;
         height: 246px;
