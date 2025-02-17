@@ -1553,7 +1553,8 @@
         width: 308px;
         height: 57px;
         top: 362px;
-        left: 16px;
+    left: 50%; /* Pusatkan elemen ke tengah */
+    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
         font-size: 16px;
         font-weight: 400;
         line-height: 19.36px;
@@ -1563,7 +1564,8 @@
         width: 308px;
         height: 76px;
         top: 642px;
-        left: 16px;
+    left: 50%; /* Pusatkan elemen ke tengah */
+    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
         font-size: 16px;
         font-weight: 400;
         line-height: 19.36px;
@@ -1573,7 +1575,8 @@
         width: 308px;
         height: 76px;
         top: 941px;
-        left: 16px;
+    left: 50%; /* Pusatkan elemen ke tengah */
+    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
         font-size: 16px;
         font-weight: 400;
         line-height: 19.36px;
@@ -1583,7 +1586,8 @@
         width: 200px;
         height: 24px;
         top: 338px;
-        left: 78px;
+        left: 50%; /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
         font-size: 20px;
         font-weight: 600;
         line-height: 24.2px;
@@ -1593,7 +1597,8 @@
         width: 200px;
         height: 24px;
         top: 618px;
-        left: 78px;
+        left: 50%; /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
         font-size: 20px;
         font-weight: 600;
         line-height: 24.2px;
@@ -1603,7 +1608,8 @@
         width: 200px;
         height: 24px;
         top: 917px;
-        left: 77px;
+        left: 50%; /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
         font-size: 20px;
         font-weight: 600;
         line-height: 24.2px;
@@ -1613,21 +1619,24 @@
         width: 159px;
         height: 159px;
         top: 167px;
-        left: 91px;
+    left: 50%; /* Pusatkan elemen ke tengah */
+    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
     }
 
     .mesin-gambar-2 {
         width: 159px;
         height: 159px;
         top: 447px;
-        left: 91px;
+    left: 50%; /* Pusatkan elemen ke tengah */
+    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
     }
 
     .mesin-gambar-3 {
         width: 159px;
         height: 159px;
         top: 746px;
-        left: 91px;
+    left: 50%; /* Pusatkan elemen ke tengah */
+    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
     }
 
     .kenapa-mesin-title {
