@@ -215,7 +215,7 @@
     font-weight: 400;
     line-height: 33.89px;
     letter-spacing: 0%;
-    color: black;
+    color: #676767;
 }
 
 /* Styling untuk div kenapa-mesin-kami */
@@ -659,6 +659,7 @@
 
 /* Styling untuk div footer */
 .footer {
+    transition: margin-top 0.4s ease-in-out; /* Efek transisi smooth */
     position: absolute;
     width: 1420px;
     height: 404px;
@@ -666,6 +667,11 @@
     left: 250px;
     background: url('asset/footer.png') no-repeat center center/cover;
     border-radius: 32px;
+}
+
+.footer-space {
+    height: 2380px; /* Sesuaikan dengan kebutuhan */
+    width: 100%;
 }
 
 /* Styling untuk logo dalam footer (Desktop) */
