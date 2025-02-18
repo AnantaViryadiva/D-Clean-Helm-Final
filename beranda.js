@@ -177,8 +177,7 @@ if (window.innerWidth >= 768) {
 document.addEventListener("DOMContentLoaded", function () {
     var swiper = new Swiper(".swiper-container", {
         loop: true,
-        centeredSlides: true,
-        slidesPerView: 1, // Pastikan hanya satu slide yang muncul dalam satu waktu
+        slidesPerView: 1, 
         autoplay: {
             delay: 5000,
             disableOnInteraction: false,
@@ -193,8 +192,13 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         effect: "slide",
         lazy: true,
-    });
+        grabCursor: true,
+        allowTouchMove: true,
+        touchEventsTarget: 'wrapper',
+        centeredSlides: false, // Coba matikan centeredSlides
+    });    
 });
+
 
 
 

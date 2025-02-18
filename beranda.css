@@ -4,10 +4,11 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+
 a {
     text-decoration: none;
-  }
-  
+}
+
 
 /* Styling Navbar */
 .navbar {
@@ -116,9 +117,11 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    height: 928px; /* Default untuk desktop */
+    height: 928px;
+    /* Default untuk desktop */
     background: linear-gradient(to right, #00AED6, #0092CA);
-    z-index: -1; /* Menempatkan frame di belakang navbar */
+    z-index: -1;
+    /* Menempatkan frame di belakang navbar */
 }
 
 /* =========================================== */
@@ -606,7 +609,8 @@ a {
 .tanya-jawab-container {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Jarak antar frame */
+    gap: 15px;
+    /* Jarak antar frame */
 }
 
 /* Styling untuk setiap frame pertanyaan */
@@ -641,7 +645,8 @@ a {
 /* Styling untuk ikon toggle (+/-) */
 .toggle-icon {
     position: absolute;
-    right: 50px; /* Geser ke kanan sesuai permintaan */
+    right: 50px;
+    /* Geser ke kanan sesuai permintaan */
     top: 25px;
     width: 30px;
     height: 30px;
@@ -660,7 +665,8 @@ a {
     height: 1px;
     background-color: black;
     margin: 10px 0;
-    display: none; /* Sembunyikan secara default */
+    display: none;
+    /* Sembunyikan secara default */
 }
 
 /* Styling untuk jawaban */
@@ -675,8 +681,10 @@ a {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    width: 100%; /* Menyesuaikan lebar kontainer */
-    margin-top: 10px; /* Jarak dari garis pembatas */
+    width: 100%;
+    /* Menyesuaikan lebar kontainer */
+    margin-top: 10px;
+    /* Jarak dari garis pembatas */
 }
 
 /* Styling untuk frame yang terbuka */
@@ -702,7 +710,8 @@ a {
 
 /* Styling untuk div footer */
 .footer {
-    transition: margin-top 0.4s ease-in-out; /* Efek transisi smooth */
+    transition: margin-top 0.4s ease-in-out;
+    /* Efek transisi smooth */
     position: absolute;
     width: 1420px;
     height: 404px;
@@ -713,7 +722,8 @@ a {
 }
 
 .footer-space {
-    height: 4600px; /* Sesuaikan dengan kebutuhan */
+    height: 4600px;
+    /* Sesuaikan dengan kebutuhan */
     width: 100%;
 }
 
@@ -868,11 +878,13 @@ a {
     line-height: 24.2px;
     letter-spacing: 0%;
     color: #FFFFFF;
-    text-decoration: none; /* Hapus garis bawah default */
+    text-decoration: none;
+    /* Hapus garis bawah default */
 }
 
 .footer-email:hover {
-    text-decoration: underline; /* Tampilkan underline saat hover */
+    text-decoration: underline;
+    /* Tampilkan underline saat hover */
 }
 
 /* Styling untuk teks "Sosial Media" di footer (Desktop) */
@@ -1052,66 +1064,67 @@ a {
 @media screen and (max-width: 768px) {
     .footer-space {
         display: none !important;
-      }
+    }
+
     /* Styling untuk judul "Visi" dalam frame-1 */
-.our-story-visi-title {
-    position: absolute;
-    width: 58px;
-    height: 39px;
-    top: 16px;
-    left: 141px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 38.73px;
-    letter-spacing: 0%;
-    color: black;
-}
+    .our-story-visi-title {
+        position: absolute;
+        width: 58px;
+        height: 39px;
+        top: 16px;
+        left: 141px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 38.73px;
+        letter-spacing: 0%;
+        color: black;
+    }
 
-/* Styling untuk teks dalam "Visi" */
-.our-story-visi-text {
-    position: absolute;
-    width: 308px;
-    height: 57px;
-    top: 61px;
-    left: 16px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19.36px;
-    letter-spacing: 0%;
-    color: #676767;
-}
+    /* Styling untuk teks dalam "Visi" */
+    .our-story-visi-text {
+        position: absolute;
+        width: 308px;
+        height: 57px;
+        top: 61px;
+        left: 16px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19.36px;
+        letter-spacing: 0%;
+        color: #676767;
+    }
 
-/* Styling untuk judul "Misi" dalam frame-2 */
-.our-story-misi-title {
-    position: absolute;
-    width: 64px;
-    height: 39px;
-    top: 16px;
-    left: 138px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 38.73px;
-    letter-spacing: 0%;
-    color: black;
-}
+    /* Styling untuk judul "Misi" dalam frame-2 */
+    .our-story-misi-title {
+        position: absolute;
+        width: 64px;
+        height: 39px;
+        top: 16px;
+        left: 138px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 38.73px;
+        letter-spacing: 0%;
+        color: black;
+    }
 
-/* Styling untuk teks dalam "Misi" */
-.our-story-misi-text {
-    position: absolute;
-    width: 308px;
-    height: 57px;
-    top: 61px;
-    left: 16px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19.36px;
-    letter-spacing: 0%;
-    color: #676767;
-}
+    /* Styling untuk teks dalam "Misi" */
+    .our-story-misi-text {
+        position: absolute;
+        width: 308px;
+        height: 57px;
+        top: 61px;
+        left: 16px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19.36px;
+        letter-spacing: 0%;
+        color: #676767;
+    }
 
     .our-story {
         position: absolute;
@@ -1161,7 +1174,7 @@ a {
         left: 50%;
         transform: translateX(-50%);
     }
-    
+
     .sosial-media {
         width: 99px;
         height: 19px;
@@ -1186,7 +1199,7 @@ a {
         font-size: 12px;
         line-height: 14.52px;
     }
-    
+
     .footer-email {
         width: 183px;
         height: 15px;
@@ -1280,141 +1293,162 @@ a {
     }
 
     .footer {
-        transition: margin-top 0.4s ease-in-out; /* Efek transisi smooth */
+        transition: margin-top 0.4s ease-in-out;
+        /* Efek transisi smooth */
         width: 100%;
         height: 420px;
         top: 4250px;
-        left: 0; /* Pastikan berada di tengah layar */
-        border-radius: 0px; /* Opsional, bisa dihapus jika ingin tetap berbentuk */
+        left: 0;
+        /* Pastikan berada di tengah layar */
+        border-radius: 0px;
+        /* Opsional, bisa dihapus jika ingin tetap berbentuk */
     }
 
-    /* Styling untuk div "Tanya Jawab" pada mode mobile */
-.tanya-jawab {
-    position: absolute;
-    left: 50%; /* Pusatkan elemen ke tengah */
-    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
-    width: 380px;
-    height: auto;
-    display: block;
-}
+    .tanya-jawab {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 52px);
+        /* Hitung otomatis agar tetap 26px dari tepi browser */
+        max-width: 380px;
+        /* Batasi lebar maksimal */
+        height: auto;
+    }
 
-/* Menyembunyikan H2 di mode mobile */
-.tanya-jawab-title {
-    display: none;
-}
 
-/* Container untuk semua frame pertanyaan */
-.tanya-jawab-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-}
+    /* Menyembunyikan H2 di mode mobile */
+    .tanya-jawab-title {
+        display: none;
+    }
 
-/* Styling untuk setiap frame pertanyaan */
-.tanya-jawab-frame {
-    position: relative;
-    width: 380px;
-    height: 38px; /* Ukuran frame sebelum dibuka */
-    min-height: 38px; /* Menjamin frame tidak mengecil */
-    background: #D5F0FB;
-    border-radius: 3px;
-    cursor: pointer;
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
-    padding: 5px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-}
+    /* Container untuk semua frame pertanyaan */
+    .tanya-jawab-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
 
-/* Styling untuk teks pertanyaan */
-.tanya-jawab-text {
-    width: 249px;
-    height: 17px;
-    font-family: 'Inter', sans-serif;
-    font-size: 14px; /* Ukuran font lebih kecil untuk mobile */
-    font-weight: 400;
-    line-height: 17px;
-    letter-spacing: 0%;
-    color: black;
-    position: absolute;
-    top: 11px;
-    left: 10px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-}
+    /* Styling untuk setiap frame pertanyaan */
+    .tanya-jawab-frame {
+        position: relative;
+        width: 380px;
+        height: 38px;
+        /* Ukuran frame sebelum dibuka */
+        min-height: 38px;
+        /* Menjamin frame tidak mengecil */
+        background: #D5F0FB;
+        border-radius: 3px;
+        cursor: pointer;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        padding: 5px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+    }
 
-/* Styling untuk ikon toggle (+/-) pada mode mobile */
-.toggle-icon {
-    position: absolute;
-    top: 12px; /* Posisi atas */
-    left: 330px; /* Posisi kiri */
-    width: 14px; /* Lebar ikon */
-    height: 14px; /* Tinggi ikon */
-    font-size: 14px; /* Ukuran font lebih kecil untuk mobile */
-    font-weight: bold;
-    color: black;
-    text-align: center;
-    line-height: 14px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-}
+    /* Styling untuk teks pertanyaan */
+    .tanya-jawab-text {
+        width: 249px;
+        height: 17px;
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        /* Ukuran font lebih kecil untuk mobile */
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0%;
+        color: black;
+        position: absolute;
+        top: 11px;
+        left: 10px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
 
-/* Styling untuk garis pembatas pada mode mobile */
-.tanya-jawab-divider {
-    width: 340px;
-    height: 1px;
-    background-color: black;
-    margin: 5px 0;
-    position: absolute;
-    top: 40px; /* Posisi dari atas frame */
-    left: 10px;
-    border-width: 0.75px; /* Lebar garis */
-    display: none; /* Sembunyikan secara default */
-}
+    /* Styling untuk ikon toggle (+/-) pada mode mobile */
+    .toggle-icon {
+        position: absolute;
+        top: 12px;
+        /* Posisi atas */
+        left: 330px;
+        /* Posisi kiri */
+        width: 14px;
+        /* Lebar ikon */
+        height: 14px;
+        /* Tinggi ikon */
+        font-size: 14px;
+        /* Ukuran font lebih kecil untuk mobile */
+        font-weight: bold;
+        color: black;
+        text-align: center;
+        line-height: 14px;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+    }
 
-/* Styling untuk jawaban di mode mobile */
-.tanya-jawab-answer {
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 17px;
-    letter-spacing: 0%;
-    color: #676767;
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    width: 320px; /* Menyesuaikan lebar kontainer */
-    height: 85px; /* Ukuran teks jawaban */
-    position: absolute;
-    top: 50px; /* Posisi teks jawaban */
-    left: 10px;
-}
+    /* Styling untuk garis pembatas pada mode mobile */
+    .tanya-jawab-divider {
+        width: 340px;
+        height: 1px;
+        background-color: black;
+        margin: 5px 0;
+        position: absolute;
+        top: 40px;
+        /* Posisi dari atas frame */
+        left: 10px;
+        border-width: 0.75px;
+        /* Lebar garis */
+        display: none;
+        /* Sembunyikan secara default */
+    }
 
-/* Menjaga frame tetap besar meskipun jawaban tidak terbuka */
-.tanya-jawab-frame.active {
-    min-height: 140px; /* Menjamin frame memiliki ukuran cukup untuk jawaban */
-    height: auto; /* Ukuran otomatis */
-}
+    /* Styling untuk jawaban di mode mobile */
+    .tanya-jawab-answer {
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0%;
+        color: #676767;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        width: 320px;
+        /* Menyesuaikan lebar kontainer */
+        height: 85px;
+        /* Ukuran teks jawaban */
+        position: absolute;
+        top: 50px;
+        /* Posisi teks jawaban */
+        left: 10px;
+    }
 
-/* Garis pembatas hanya terlihat saat frame aktif */
-.tanya-jawab-frame.active .tanya-jawab-divider {
-    display: block;
-}
+    /* Menjaga frame tetap besar meskipun jawaban tidak terbuka */
+    .tanya-jawab-frame.active {
+        min-height: 140px;
+        /* Menjamin frame memiliki ukuran cukup untuk jawaban */
+        height: auto;
+        /* Ukuran otomatis */
+    }
 
-/* Jawaban hanya terlihat saat frame aktif */
-.tanya-jawab-frame.active .tanya-jawab-answer {
-    opacity: 1;
-    max-height: 100px;
-}
+    /* Garis pembatas hanya terlihat saat frame aktif */
+    .tanya-jawab-frame.active .tanya-jawab-divider {
+        display: block;
+    }
 
-/* Styling untuk ikon saat frame aktif (ubah ke -) */
-.tanya-jawab-frame.active .toggle-icon {
-    content: "-";
-}
+    /* Jawaban hanya terlihat saat frame aktif */
+    .tanya-jawab-frame.active .tanya-jawab-answer {
+        opacity: 1;
+        max-height: 100px;
+    }
+
+    /* Styling untuk ikon saat frame aktif (ubah ke -) */
+    .tanya-jawab-frame.active .toggle-icon {
+        content: "-";
+    }
 
     .peluang-baru-box {
         position: absolute;
@@ -1472,8 +1506,10 @@ a {
 
     .peluang-baru {
         position: absolute;
-        left: 50%; /* Pusatkan elemen ke tengah */
-        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
+        left: 50%;
+        /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%);
+        /* Pastikan elemen benar-benar di tengah */
         top: 3300px;
         width: 340px;
         height: 666px;
@@ -1489,8 +1525,10 @@ a {
 
     .cuci-helm-box {
         position: absolute;
-        left: 50%; /* Pusatkan elemen ke tengah */
-        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
+        left: 50%;
+        /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%);
+        /* Pastikan elemen benar-benar di tengah */
         top: 590px;
         width: 350px;
         height: 60px;
@@ -1499,8 +1537,10 @@ a {
 
     .cuci-helm-image {
         position: absolute;
-        left: 50%; /* Pusatkan elemen ke tengah */
-        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
+        left: 50%;
+        /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%);
+        /* Pastikan elemen benar-benar di tengah */
         top: 16px;
         width: 326px;
         height: 287px;
@@ -1508,8 +1548,10 @@ a {
 
     .cuci-helm-text {
         position: absolute;
-        left: 50%; /* Pusatkan elemen ke tengah */
-        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
+        left: 50%;
+        /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%);
+        /* Pastikan elemen benar-benar di tengah */
         top: 447px;
         width: 350px;
         height: 96px;
@@ -1522,8 +1564,10 @@ a {
 
     .cuci-helm-title {
         position: absolute;
-        left: 52%; /* Pusatkan elemen ke tengah */
-        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
+        left: 52%;
+        /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%);
+        /* Pastikan elemen benar-benar di tengah */
         top: 322px;
         width: 370px;
         height: 117px;
@@ -1546,8 +1590,10 @@ a {
         width: 308px;
         height: 57px;
         top: 362px;
-    left: 50%; /* Pusatkan elemen ke tengah */
-    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
+        left: 50%;
+        /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%);
+        /* Pastikan elemen benar-benar di tengah */
         font-size: 16px;
         font-weight: 400;
         line-height: 19.36px;
@@ -1557,8 +1603,10 @@ a {
         width: 308px;
         height: 76px;
         top: 642px;
-    left: 50%; /* Pusatkan elemen ke tengah */
-    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
+        left: 50%;
+        /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%);
+        /* Pastikan elemen benar-benar di tengah */
         font-size: 16px;
         font-weight: 400;
         line-height: 19.36px;
@@ -1568,8 +1616,10 @@ a {
         width: 308px;
         height: 76px;
         top: 941px;
-    left: 50%; /* Pusatkan elemen ke tengah */
-    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
+        left: 50%;
+        /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%);
+        /* Pastikan elemen benar-benar di tengah */
         font-size: 16px;
         font-weight: 400;
         line-height: 19.36px;
@@ -1579,8 +1629,10 @@ a {
         width: 200px;
         height: 24px;
         top: 338px;
-        left: 50%; /* Pusatkan elemen ke tengah */
-        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
+        left: 50%;
+        /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%);
+        /* Pastikan elemen benar-benar di tengah */
         font-size: 20px;
         font-weight: 600;
         line-height: 24.2px;
@@ -1590,8 +1642,10 @@ a {
         width: 200px;
         height: 24px;
         top: 618px;
-        left: 50%; /* Pusatkan elemen ke tengah */
-        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
+        left: 50%;
+        /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%);
+        /* Pastikan elemen benar-benar di tengah */
         font-size: 20px;
         font-weight: 600;
         line-height: 24.2px;
@@ -1601,8 +1655,10 @@ a {
         width: 200px;
         height: 24px;
         top: 917px;
-        left: 50%; /* Pusatkan elemen ke tengah */
-        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
+        left: 50%;
+        /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%);
+        /* Pastikan elemen benar-benar di tengah */
         font-size: 20px;
         font-weight: 600;
         line-height: 24.2px;
@@ -1612,34 +1668,43 @@ a {
         width: 159px;
         height: 159px;
         top: 167px;
-    left: 50%; /* Pusatkan elemen ke tengah */
-    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
+        left: 50%;
+        /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%);
+        /* Pastikan elemen benar-benar di tengah */
     }
 
     .mesin-gambar-2 {
         width: 159px;
         height: 159px;
         top: 447px;
-    left: 50%; /* Pusatkan elemen ke tengah */
-    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
+        left: 50%;
+        /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%);
+        /* Pastikan elemen benar-benar di tengah */
     }
 
     .mesin-gambar-3 {
         width: 159px;
         height: 159px;
         top: 746px;
-    left: 50%; /* Pusatkan elemen ke tengah */
-    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
+        left: 50%;
+        /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%);
+        /* Pastikan elemen benar-benar di tengah */
     }
 
     .kenapa-mesin-title {
         position: absolute;
-        left: 16px;
+        left: 50%;
+        /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%);
+        /* Pastikan elemen benar-benar di tengah */
         top: 16px;
         width: 308px;
         height: 117px;
         font-family: 'Inter', sans-serif;
-        font-size: 32px;
+        font-size: 40px;
         font-weight: 700;
         line-height: 38.73px;
         letter-spacing: 0%;
@@ -1648,63 +1713,75 @@ a {
     .kenapa-mesin-kami {
         position: absolute;
         top: 1450px;
-        left: 50%; /* Pusatkan elemen ke tengah */
-        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
+        left: 50%;
+        /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%);
+        /* Pastikan elemen benar-benar di tengah */
         width: 370px;
         height: 1049px;
         border-radius: 10px;
     }
 
-/* Pastikan elemen tidak melebihi viewport */
-.siapa-kami {
-    position: relative;
-    top: 820px;
-    left: 50%; /* Pusatkan elemen ke tengah */
-    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
-    width: 100%; /* Pastikan elemen tidak lebih dari viewport */
-    max-width: 100%;
-    height: auto;
-}
+    /* Pastikan elemen tidak melebihi viewport */
+    .siapa-kami {
+        position: relative;
+        top: 820px;
+        left: 50%;
+        /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%);
+        /* Pastikan elemen benar-benar di tengah */
+        width: 100%;
+        /* Pastikan elemen tidak lebih dari viewport */
+        max-width: 100%;
+        height: auto;
+    }
 
-/* Pastikan teks tidak menyebabkan overflow */
-.siapa-kami-text {
-    position: absolute;
-    left: 50%; /* Pusatkan elemen ke tengah */
-    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
-    top: 350px;
-    width: 100%;
-    max-width: 308px; /* Batas maksimal sesuai desain */
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19.36px;
-    letter-spacing: 0%;
-    word-wrap: break-word;
-    color: #676767;
-}
+    /* Pastikan teks tidak menyebabkan overflow */
+    .siapa-kami-text {
+        position: absolute;
+        left: 50%;
+        /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%);
+        /* Pastikan elemen benar-benar di tengah */
+        top: 350px;
+        width: 100%;
+        max-width: 308px;
+        /* Batas maksimal sesuai desain */
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.36px;
+        letter-spacing: 0%;
+        word-wrap: break-word;
+        color: #676767;
+    }
 
-/* Pastikan judul tidak menyebabkan overflow */
-.siapa-kami-title {
-    position: absolute;
-    left: 50%; /* Pusatkan elemen ke tengah */
-    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
-    top: 300px;
-    width: 100%;
-    max-width: 308px;
-    font-family: 'Inter', sans-serif;
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 38.73px;
-}
+    /* Pastikan judul tidak menyebabkan overflow */
+    .siapa-kami-title {
+        position: absolute;
+        left: 50%;
+        /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%);
+        /* Pastikan elemen benar-benar di tengah */
+        top: 300px;
+        width: 100%;
+        max-width: 308px;
+        font-family: 'Inter', sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 38.73px;
+    }
 
-/* Pastikan gambar tidak menyebabkan overflow */
-.siapa-kami-image {
-    width: 100%;
-    max-width: 320px; /* Batasi agar tidak lebih besar dari desain */
-    height: auto;
-    display: block;
-    margin: 0 auto; /* Pastikan tetap di tengah */
-}
+    /* Pastikan gambar tidak menyebabkan overflow */
+    .siapa-kami-image {
+        width: 100%;
+        max-width: 320px;
+        /* Batasi agar tidak lebih besar dari desain */
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        /* Pastikan tetap di tengah */
+    }
 
     .navbar {
         width: 100%;
@@ -1718,69 +1795,117 @@ a {
         /* Agar tetap di tengah layar */
     }
 
-/* Styling untuk wrapper carousel */
-.sampul {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 800px; /* Tetap sesuai dengan desain mobile */
-    background: linear-gradient(to right, #00AED6, #0092CA);
-    z-index: -1;
-    overflow: hidden; /* Mencegah overflow ke kanan */
-}
+    /* Styling untuk wrapper carousel */
+    .sampul {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 800px;
+        /* Tetap sesuai dengan desain mobile */
+        background: linear-gradient(to right, #00AED6, #0092CA);
+        z-index: -1;
+        overflow: hidden;
+        /* Mencegah overflow ke kanan */
+    }
 
-/* Swiper Container */
-.swiper-container {
-    width: 100%;
-    height: 100%;
-}
+    /* Swiper Container */
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
 
-/* Styling untuk setiap slide */
-.swiper-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-}
+    /* Styling untuk setiap slide */
+    .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+    }
 
-/* Gunakan kembali styling yang ada tanpa mengubah posisi & ukuran */
-/* Sampul 1 */
-.sampul1 .sampul-text, 
-.sampul2 .sampul-text {
-    position: absolute;
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 38.73px;
-    letter-spacing: 0%;
-}
+    /* Gunakan kembali styling yang ada tanpa mengubah posisi & ukuran */
+    /* Sampul 1 */
+    .sampul1 .sampul-text,
+    .sampul2 .sampul-text {
+        position: absolute;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 38.73px;
+        letter-spacing: 0%;
+    }
 
-.sampul1 .sampul-subtext, 
-.sampul2 .sampul-subtext {
-    position: absolute;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 24.2px;
-    letter-spacing: 0%;
-}
+    .sampul1 .sampul-subtext,
+    .sampul2 .sampul-subtext {
+        position: absolute;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24.2px;
+        letter-spacing: 0%;
+    }
 
-/* Posisi elemen Sampul 1 */
-.sampul1 .sampul-text { top: 80px; left: 50%; transform: translateX(-50%); width: 350px; height: 78px; }
-.sampul1 .sampul-subtext { top: 164px; left: 50%; transform: translateX(-50%); width: 350px; height: 72px; }
-.sampul1 .sampul-image { top: 320px; left: 50%; transform: translateX(-50%); width: 300px; height: 246px; }
-.sampul1 .sampul-price { top: 570px; left: 50%; transform: translateX(-50%); width: 308px; height: 179.74px; }
+    /* Posisi elemen Sampul 1 */
+    .sampul1 .sampul-text {
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 350px;
+        height: 78px;
+    }
 
-/* Posisi elemen Sampul 2 */
-.sampul2 .sampul-text { top: 106px; left: 26px; width: 308px; height: 78px; }
-.sampul2 .sampul-subtext { top: 280px; left: 26px; width: 308px; height: 72px; }
-.sampul2 .sampul-image { top: 400px; left: 50px; width: 259.48px; height: 246px; }
+    .sampul1 .sampul-subtext {
+        top: 164px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 350px;
+        height: 72px;
+    }
 
-/* Styling Pagination */
-.swiper-pagination {
-    bottom: 10px;
-    text-align: center;
-}
+    .sampul1 .sampul-image {
+        top: 290px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 300px;
+        height: 270px;
+    }
+
+    .sampul1 .sampul-price {
+        top: 570px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 308px;
+        height: 179.74px;
+    }
+
+    /* Posisi elemen Sampul 2 */
+    .sampul2 .sampul-text {
+        top: 145px;
+        left: 26px;
+        right: 26px;
+        width: auto;
+        height: 78px;
+    }
+
+    .sampul2 .sampul-subtext {
+        top: 280px;
+        left: 26px;
+        right: 26px;
+        width: auto;
+        height: 72px;
+    }
+
+    .sampul2 .sampul-image {
+        top: 400px;
+        left: 50px;
+        width: 340px;
+        height: 300px;
+    }
+
+    /* Styling Pagination */
+    .swiper-pagination {
+        bottom: 10px;
+        text-align: center;
+    }
 
 
     .nav-container {

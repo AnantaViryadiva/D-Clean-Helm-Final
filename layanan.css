@@ -1306,7 +1306,7 @@ a {
     .footer {
         width: 100%;
         height: 450px;
-        top: 3350px;
+        top: 3280px;
         left: 0; /* Pastikan berada di tengah layar */
         border-radius: 0px; /* Opsional, bisa dihapus jika ingin tetap berbentuk */
     }
@@ -1495,7 +1495,7 @@ a {
 
     .peluang-baru {
         position: absolute;
-        top: 2630px;
+        top: 2550px;
         width: 100%;
         height: 666px;
     }
@@ -1652,12 +1652,13 @@ a {
 
     .kenapa-mesin-title {
         position: absolute;
-        left: 16px;
+        left: 50%; /* Pusatkan elemen ke tengah */
+        transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
         top: 16px;
         width: 308px;
         height: 117px;
         font-family: 'Inter', sans-serif;
-        font-size: 32px;
+        font-size: 40px;
         font-weight: 700;
         line-height: 38.73px;
         letter-spacing: 0%;
@@ -1749,9 +1750,10 @@ a {
     }
 
     .sampul-text {
-        top: 106px;
+        top: 145px;
         left: 26px;
-        width: 308px;
+        right: 26px;
+        width: auto;        
         height: 78px;
         font-size: 32px;
         font-weight: 700;
@@ -1762,7 +1764,8 @@ a {
     .sampul-subtext {
         top: 280px;
         left: 26px;
-        width: 308px;
+        right: 26px;
+        width: auto;        
         height: 72px;
         font-size: 20px;
         font-weight: 400;
@@ -1772,9 +1775,10 @@ a {
 
     .sampul-image {
         top: 400px;
-        left: 50px;
-        width: 259.48px;
-        height: 246px;
+        left: 50%; 
+        transform: translateX(-50%);
+        width: 340px;
+        height: 300px;
     }
 
     .nav-container {
