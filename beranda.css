@@ -113,6 +113,7 @@ a {
 
 /* Styling untuk div sampul */
 .sampul {
+    overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
@@ -1309,11 +1310,11 @@ a {
         left: 50%;
         transform: translateX(-50%);
         width: calc(100% - 52px);
-        /* Hitung otomatis agar tetap 26px dari tepi browser */
         max-width: 380px;
-        /* Batasi lebar maksimal */
         height: auto;
+        box-sizing: border-box; /* Tambahkan ini agar padding tidak menambah lebar */
     }
+    
 
 
     /* Menyembunyikan H2 di mode mobile */
@@ -1332,7 +1333,7 @@ a {
     /* Styling untuk setiap frame pertanyaan */
     .tanya-jawab-frame {
         position: relative;
-        width: 380px;
+        width: 100%; /* Ubah dari 380px ke 100% agar tetap responsif */
         height: 38px;
         /* Ukuran frame sebelum dibuka */
         min-height: 38px;
@@ -1372,7 +1373,7 @@ a {
         position: absolute;
         top: 12px;
         /* Posisi atas */
-        left: 330px;
+        left: auto; /* Hapus positioning yang bisa menyebabkan pergeseran */
         /* Posisi kiri */
         width: 14px;
         /* Lebar ikon */
@@ -1386,6 +1387,7 @@ a {
         line-height: 14px;
         cursor: pointer;
         transition: transform 0.3s ease-in-out;
+        right: 10px;
     }
 
     /* Styling untuk garis pembatas pada mode mobile */
@@ -1416,9 +1418,9 @@ a {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-        width: 320px;
+        width: auto;
         /* Menyesuaikan lebar kontainer */
-        height: 85px;
+        height: auto;
         /* Ukuran teks jawaban */
         position: absolute;
         top: 50px;
