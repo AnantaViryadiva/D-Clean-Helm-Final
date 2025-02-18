@@ -1695,9 +1695,10 @@
     }
 
     .sampul-text {
-        top: 106px;
+        top: 145px;
         left: 26px;
-        width: 308px;
+        right: 26px;
+        width: auto;        
         height: 78px;
         font-size: 32px;
         font-weight: 700;
@@ -1708,7 +1709,8 @@
     .sampul-subtext {
         top: 280px;
         left: 26px;
-        width: 308px;
+        right: 26px;
+        width: auto;        
         height: 72px;
         font-size: 20px;
         font-weight: 400;
@@ -1718,9 +1720,10 @@
 
     .sampul-image {
         top: 400px;
-        left: 50px;
-        width: 259.48px;
-        height: 246px;
+        left: 50%; 
+        transform: translateX(-50%);
+        width: 340px;
+        height: 300px;
     }
 
     .nav-container {
