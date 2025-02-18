@@ -1318,7 +1318,7 @@ a {
     height: 38px; /* Ukuran frame sebelum dibuka */
     min-height: 38px; /* Menjamin frame tidak mengecil */
     background: #D5F0FB;
-    border-radius: 10px;
+    border-radius: 3px;
     cursor: pointer;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
@@ -1477,6 +1477,7 @@ a {
         top: 3300px;
         width: 340px;
         height: 666px;
+        border-radius: 10px;
     }
 
     .cuci-helm-box-text {

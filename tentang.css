@@ -1100,6 +1100,10 @@
         line-height: 19.36px;
     }
 
+    .our-story-frame{
+        border-radius: 10px;
+    }
+
     /* Styling untuk frame pertama dalam "our-story" di mode mobile */
     .our-story-frame-1 {
         width: 340px;
@@ -1107,6 +1111,7 @@
         top: 600px;
         left: 50%;
         transform: translateX(-50%);
+        border-radius: 10px;
     }
 
     /* Styling untuk frame kedua dalam "our-story" di mode mobile */
@@ -1116,6 +1121,7 @@
         top: 760px;
         left: 50%;
         transform: translateX(-50%);
+        border-radius: 10px;
     }
 
     .sosial-media {
