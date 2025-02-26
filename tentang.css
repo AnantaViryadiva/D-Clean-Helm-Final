@@ -1,1836 +1,1717 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-/* Styling Navbar */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 115px;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 115px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
 }
 
-/* Container dalam Navbar */
 .nav-container {
-    width: calc(100% - 500px);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
+  width: calc(100% - 500px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 
-/* Styling Left Menu (Logo + Nav Links) */
 .left-menu {
-    display: flex;
-    align-items: center;
-    gap: 30px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
-/* Styling Logo */
 .logo {
-    position: relative;
-    z-index: 1101;
+  position: relative;
+  z-index: 1101;
 }
 
 .logo img {
-    width: 115px;
-    height: 115px;
-    object-fit: contain;
-    transition: all 0.3s ease;
+  width: 115px;
+  height: 115px;
+  object-fit: contain;
+  transition: all 0.3s ease;
 }
 
-/* Styling Nav Links */
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
 .nav-links li {
-    display: inline;
+  display: inline;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px 15px;
-    transition: 0.3s;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: 0.3s;
 }
 
 .nav-links a:hover {
-    color: #007bff;
+  color: #007bff;
 }
 
-/* Styling Right Menu (Hubungi Kami di Desktop) */
 .right-menu {
-    margin-left: auto;
+  margin-left: auto;
 }
 
 .contact-link {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px 15px;
-    transition: 0.3s;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: 0.3s;
 }
 
 .contact-link:hover {
-    color: #007bff;
+  color: #007bff;
 }
 
-/* Styling Hamburger Menu */
 .menu-toggle {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-    color: #333;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 10px;
-    transition: 0.3s;
-    z-index: 1101;
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  transition: 0.3s;
+  z-index: 1101;
 }
 
-/* Styling untuk div sampul */
-/* Styling untuk div sampul */
 .sampul {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    /* Responsif di semua layar */
-    height: 928px;
-    /* Default untuk desktop */
-    background: linear-gradient(to right, #00AED6, #0092CA);
-    z-index: -1;
-    /* Menempatkan frame di belakang navbar */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  height: 928px;
+
+  background: linear-gradient(to right, #00aed6, #0092ca);
+  z-index: -1;
 }
 
-/* Styling untuk teks dalam sampul (Desktop) */
 .sampul-text {
-    position: absolute;
-    top: 250px;
-    left: 300px;
-    width: 800px;
-    height: 154px;
-    font-family: 'Inter', sans-serif;
-    font-size: 64px;
-    font-weight: 700;
-    color: white;
-    line-height: 1.2;
+  position: absolute;
+  top: 250px;
+  left: 300px;
+  width: 800px;
+  height: 154px;
+  font-family: "Inter", sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
 }
 
-/* Styling untuk paragraf dalam sampul (Desktop) */
 .sampul-subtext {
-    position: absolute;
-    top: 497px;
-    left: 300px;
-    width: 700px;
-    height: 117px;
-    font-family: 'Inter', sans-serif;
-    font-size: 32px;
-    font-weight: 400;
-    color: white;
-    line-height: 38.73px;
-    letter-spacing: 0%;
+  position: absolute;
+  top: 497px;
+  left: 300px;
+  width: 700px;
+  height: 117px;
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: white;
+  line-height: 38.73px;
+  letter-spacing: 0%;
 }
 
-/* Styling untuk gambar di dalam sampul (Desktop) */
 .sampul-image {
-    position: absolute;
-    top: 214px;
-    left: 1044px;
-    width: 647px;
-    height: 613px;
+  position: absolute;
+  top: 214px;
+  left: 1044px;
+  width: 647px;
+  height: 613px;
 }
 
-/* Styling untuk gambar "9 Ribuan" dalam sampul (Desktop) */
 .sampul-price {
-    position: absolute;
-    top: 518px;
-    left: 300px;
-    width: 466.21px;
-    height: 309.18px;
+  position: absolute;
+  top: 518px;
+  left: 300px;
+  width: 466.21px;
+  height: 309.18px;
 }
 
-/* Styling untuk div siapa-kami */
 .siapa-kami {
-    position: absolute;
-    top: 1014px;
-    left: 300px;
-    width: 1320px;
-    height: 505px;
-    border: 1px solid transparent;
-    /* Menjaga batas konten tanpa background */
-    display: flex;
-    align-items: center;
-    position: relative;
+  position: absolute;
+  top: 1014px;
+  left: 300px;
+  width: 1320px;
+  height: 505px;
+  border: 1px solid transparent;
+
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
-/* Styling untuk gambar dalam siapa-kami (Desktop) */
 .siapa-kami-image {
-    width: 570px;
-    height: 505px;
+  width: 570px;
+  height: 505px;
 }
 
-/* Styling untuk teks "Siapa Kami?" */
 .siapa-kami-title {
-    position: absolute;
-    left: 610px;
-    top: 20px;
-    /* Menggeser teks lebih ke atas agar lebih mepet dengan frame */
-    width: 397px;
-    height: 77px;
-    font-family: 'Inter', sans-serif;
-    font-size: 64px;
-    font-weight: 700;
-    line-height: 77.45px;
-    color: black;
+  position: absolute;
+  left: 610px;
+  top: 20px;
+
+  width: 397px;
+  height: 77px;
+  font-family: "Inter", sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 77.45px;
+  color: black;
 }
 
-/* Styling untuk paragraf dalam siapa-kami (Desktop) */
 .siapa-kami-text {
-    position: absolute;
-    left: 610px;
-    top: 120px;
-    width: 710px;
-    height: 272px;
-    font-family: 'Inter', sans-serif;
-    font-size: 28px;
-    font-weight: 400;
-    line-height: 33.89px;
-    letter-spacing: 0%;
-    color: #676767;
+  position: absolute;
+  left: 610px;
+  top: 120px;
+  width: 710px;
+  height: 272px;
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 33.89px;
+  letter-spacing: 0%;
+  color: #676767;
 }
 
-/* Styling untuk div kenapa-mesin-kami */
 .kenapa-mesin-kami {
-    position: absolute;
-    top: 1605px;
-    left: 250px;
-    width: 1420px;
-    height: 677px;
-    background-color: #D5F0FB;
-    border-radius: 32px;
-    /* Tambahkan sedikit rounded corner agar lebih smooth */
+  position: absolute;
+  top: 1605px;
+  left: 250px;
+  width: 1420px;
+  height: 677px;
+  background-color: #d5f0fb;
+  border-radius: 32px;
 }
 
-/* Styling untuk teks "Mengapa harus dengan mesin kami?" (Desktop) */
 .kenapa-mesin-title {
-    position: absolute;
-    left: 131px;
-    top: 50px;
-    width: 1158px;
-    height: 77px;
-    font-family: 'Inter', sans-serif;
-    font-size: 64px;
-    font-weight: 700;
-    line-height: 77.45px;
-    letter-spacing: 0%;
-    color: black;
+  position: absolute;
+  left: 131px;
+  top: 50px;
+  width: 1158px;
+  height: 77px;
+  font-family: "Inter", sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 77.45px;
+  letter-spacing: 0%;
+  color: black;
 }
 
-/* Styling umum untuk semua gambar di dalam "Kenapa Mesin Kami" */
 .mesin-gambar {
-    position: absolute;
-    border-radius: 50%;
-    /* Membuat gambar berbentuk lingkaran */
-    object-fit: cover;
-    /* Pastikan gambar tetap proporsional di dalam lingkaran */
+  position: absolute;
+  border-radius: 50%;
+
+  object-fit: cover;
 }
 
-/* Styling untuk masing-masing gambar di Desktop */
 .mesin-gambar-1 {
-    width: 256px;
-    height: 256px;
-    top: 177px;
-    left: 133px;
+  width: 256px;
+  height: 256px;
+  top: 177px;
+  left: 133px;
 }
 
 .mesin-gambar-2 {
-    width: 256px;
-    height: 256px;
-    top: 177px;
-    left: 577px;
+  width: 256px;
+  height: 256px;
+  top: 177px;
+  left: 577px;
 }
 
 .mesin-gambar-3 {
-    width: 256px;
-    height: 256px;
-    top: 177px;
-    left: 1027px;
+  width: 256px;
+  height: 256px;
+  top: 177px;
+  left: 1027px;
 }
 
-/* Styling umum untuk semua teks dalam "Kenapa Mesin Kami" */
 .mesin-text {
-    position: absolute;
-    font-family: 'Inter', sans-serif;
-    font-size: 28px;
-    font-weight: 600;
-    line-height: 33.89px;
-    letter-spacing: 0%;
-    color: black;
+  position: absolute;
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 33.89px;
+  letter-spacing: 0%;
+  color: black;
 }
 
-/* Styling untuk masing-masing teks di Desktop */
 .mesin-text-1 {
-    width: 300px;
-    height: 34px;
-    top: 453px;
-    left: 132px;
+  width: 300px;
+  height: 34px;
+  top: 453px;
+  left: 132px;
 }
 
 .mesin-text-2 {
-    width: 300px;
-    height: 34px;
-    top: 453px;
-    left: 574px;
+  width: 300px;
+  height: 34px;
+  top: 453px;
+  left: 574px;
 }
 
 .mesin-text-3 {
-    width: 261px;
-    height: 34px;
-    top: 453px;
-    left: 1027px;
+  width: 261px;
+  height: 34px;
+  top: 453px;
+  left: 1027px;
 }
 
-/* Styling umum untuk semua paragraf dalam "Kenapa Mesin Kami" */
 .mesin-desc {
-    position: absolute;
-    font-family: 'Inter', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 24.2px;
-    letter-spacing: 0%;
-    color: #676767;
+  position: absolute;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24.2px;
+  letter-spacing: 0%;
+  color: #676767;
 }
 
-/* Styling untuk masing-masing paragraf di Desktop */
 .mesin-desc-1 {
-    width: 388px;
-    height: 72px;
-    top: 495px;
-    left: 50px;
+  width: 388px;
+  height: 72px;
+  top: 495px;
+  left: 50px;
 }
 
 .mesin-desc-2 {
-    width: 399px;
-    height: 72px;
-    top: 495px;
-    left: 503px;
+  width: 399px;
+  height: 72px;
+  top: 495px;
+  left: 503px;
 }
 
 .mesin-desc-3 {
-    width: 400px;
-    height: 96px;
-    top: 495px;
-    left: 957px;
+  width: 400px;
+  height: 96px;
+  top: 495px;
+  left: 957px;
 }
 
-/* Styling untuk div cuci-helm */
 .cuci-helm {
-    position: absolute;
-    top: 2368px;
-    left: 0;
-    width: 100%;
-    height: 744px;
-    background-color: #0092CA;
+  position: absolute;
+  top: 2368px;
+  left: 0;
+  width: 100%;
+  height: 744px;
+  background-color: #0092ca;
 }
 
-/* Styling untuk teks "Cuci Helm Tercepat dan Termurah Se-Indonesia!" (Desktop) */
 .cuci-helm-title {
-    position: absolute;
-    left: 300px;
-    top: 116px;
-    width: 628px;
-    height: 231px;
-    font-family: 'Inter', sans-serif;
-    font-size: 64px;
-    font-weight: 700;
-    line-height: 77.45px;
-    letter-spacing: 0%;
-    color: white;
+  position: absolute;
+  left: 300px;
+  top: 116px;
+  width: 628px;
+  height: 231px;
+  font-family: "Inter", sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 77.45px;
+  letter-spacing: 0%;
+  color: white;
 }
 
-/* Styling untuk paragraf dalam "Cuci Helm" (Desktop) */
 .cuci-helm-text {
-    position: absolute;
-    left: 300px;
-    top: 355px;
-    width: 604px;
-    height: 156px;
-    font-family: 'Inter', sans-serif;
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 38.73px;
-    letter-spacing: 0%;
-    color: white;
+  position: absolute;
+  left: 300px;
+  top: 355px;
+  width: 604px;
+  height: 156px;
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 38.73px;
+  letter-spacing: 0%;
+  color: white;
 }
 
-/* Styling untuk gambar dalam "Cuci Helm" (Desktop) */
 .cuci-helm-image {
-    position: absolute;
-    left: 1032px;
-    top: 56px;
-    width: 716px;
-    height: 632px;
+  position: absolute;
+  left: 1032px;
+  top: 56px;
+  width: 716px;
+  height: 632px;
 }
 
-/* Styling untuk frame dalam "Cuci Helm Box" (Desktop) */
 .cuci-helm-box {
-    position: absolute;
-    left: 300px;
-    top: 560px;
-    width: 648px;
-    height: 62px;
-    background-color: #FFFFFF;
-    border-radius: 8px;
-    padding: 14px 65px 14px 64px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 300px;
+  top: 560px;
+  width: 648px;
+  height: 62px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 14px 65px 14px 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Efek timbul saat hover */
 .cuci-helm-box:hover {
-    transform: translateY(-3px);
-    box-shadow: 0px 10px 20px rgba(0, 146, 202, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0px 10px 20px rgba(0, 146, 202, 0.3);
 }
 
-/* Efek saat diklik */
 .cuci-helm-box:active {
-    transform: translateY(2px);
-    box-shadow: 0px 6px 12px rgba(0, 146, 202, 0.5);
+  transform: translateY(2px);
+  box-shadow: 0px 6px 12px rgba(0, 146, 202, 0.5);
 }
 
-/* Styling untuk teks dalam "Cuci Helm Box" (Desktop) */
 .cuci-helm-box-text {
-    font-family: 'Inter', sans-serif;
-    font-size: 28px;
-    font-weight: 600;
-    line-height: 33.89px;
-    letter-spacing: 0%;
-    color: #0092CA;
-    text-align: center;
-    width: 100%;
-    height: 34px;
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 33.89px;
+  letter-spacing: 0%;
+  color: #0092ca;
+  text-align: center;
+  width: 100%;
+  height: 34px;
 }
 
-/* Styling untuk div peluang-baru */
 .peluang-baru {
-    position: absolute;
-    left: 250px;
-    top: 3198px;
-    width: 1420px;
-    height: 744px;
-    background-color: #0092CA;
-    border-radius: 32px;
+  position: absolute;
+  left: 250px;
+  top: 3198px;
+  width: 1420px;
+  height: 744px;
+  background-color: #0092ca;
+  border-radius: 32px;
 }
 
-/* Styling untuk teks "Bersama Kami, Mewujudkan Peluang Baru" (Desktop) */
 .peluang-baru-title {
-    position: absolute;
-    left: 50px;
-    top: 100px;
-    width: 832px;
-    height: 154px;
-    font-family: 'Inter', sans-serif;
-    font-size: 64px;
-    font-weight: 700;
-    line-height: 77.45px;
-    letter-spacing: 0%;
-    color: white;
+  position: absolute;
+  left: 50px;
+  top: 100px;
+  width: 832px;
+  height: 154px;
+  font-family: "Inter", sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 77.45px;
+  letter-spacing: 0%;
+  color: white;
 }
 
-/* Styling untuk paragraf dalam "Peluang Baru" (Desktop) */
 .peluang-baru-text {
-    position: absolute;
-    left: 50px;
-    top: 262px;
-    width: 881px;
-    height: 117px;
-    font-family: 'Inter', sans-serif;
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 38.73px;
-    letter-spacing: 0%;
-    color: white;
+  position: absolute;
+  left: 50px;
+  top: 262px;
+  width: 881px;
+  height: 117px;
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 38.73px;
+  letter-spacing: 0%;
+  color: white;
 }
 
-/* Styling untuk gambar dalam "Peluang Baru" (Desktop) */
 .peluang-baru-image {
-    position: absolute;
-    left: 780px;
-    top: 65px;
-    width: 529px;
-    height: 679px;
+  position: absolute;
+  left: 780px;
+  top: 65px;
+  width: 529px;
+  height: 679px;
 }
 
-/* Styling untuk frame klikable dalam "Peluang Baru" (Desktop) */
 .peluang-baru-box {
-    position: absolute;
-    left: 50px;
-    top: 560px;
-    width: 648px;
-    height: 62px;
-    background-color: #FFFFFF;
-    border-radius: 8px;
-    border: 3px solid #0092CA;
-    padding: 14px 65px 14px 64px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 50px;
+  top: 560px;
+  width: 648px;
+  height: 62px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 3px solid #0092ca;
+  padding: 14px 65px 14px 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Efek timbul saat hover */
 .peluang-baru-box:hover {
-    transform: translateY(-3px);
-    box-shadow: 0px 10px 20px rgba(0, 146, 202, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0px 10px 20px rgba(0, 146, 202, 0.3);
 }
 
-/* Efek saat diklik */
 .peluang-baru-box:active {
-    transform: translateY(2px);
-    box-shadow: 0px 6px 12px rgba(0, 146, 202, 0.5);
+  transform: translateY(2px);
+  box-shadow: 0px 6px 12px rgba(0, 146, 202, 0.5);
 }
 
-/* Styling untuk teks dalam "Peluang Baru Box" */
 .peluang-baru-box-text {
-    font-family: 'Inter', sans-serif;
-    font-size: 28px;
-    font-weight: 600;
-    line-height: 33.89px;
-    letter-spacing: 0%;
-    color: #0092CA;
-    text-align: center;
-    width: 100%;
-    height: 34px;
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 33.89px;
+  letter-spacing: 0%;
+  color: #0092ca;
+  text-align: center;
+  width: 100%;
+  height: 34px;
 }
 
-/* Styling untuk div "Tanya Jawab" */
 .tanya-jawab {
-    position: absolute;
-    left: 250px;
-    top: 4028px;
-    width: 1420px;
-    height: auto;
+  position: absolute;
+  left: 250px;
+  top: 4028px;
+  width: 1420px;
+  height: auto;
 }
 
-/* Styling untuk judul "Pertanyaan yang terlintas" */
 .tanya-jawab-title {
-    position: relative;
-    left: 308px;
-    width: 804px;
-    height: 77px;
-    font-family: 'Inter', sans-serif;
-    font-size: 64px;
-    font-weight: 700;
-    line-height: 77.45px;
+  position: relative;
+  left: 308px;
+  width: 804px;
+  height: 77px;
+  font-family: "Inter", sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 77.45px;
+  letter-spacing: 0%;
+  color: black;
+  margin-bottom: 30px;
+}
+
+.tanya-jawab-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tanya-jawab-frame {
+  position: relative;
+  width: 1420px;
+  background: #d5f0fb;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+  padding: 20px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.tanya-jawab-text {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29.05px;
+  letter-spacing: 0%;
+  color: black;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-icon {
+  position: absolute;
+  right: 50px;
+
+  top: 25px;
+  width: 30px;
+  height: 30px;
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.tanya-jawab-divider {
+  width: 1320px;
+  height: 1px;
+  background-color: black;
+  margin: 10px 0;
+  display: none;
+}
+
+.tanya-jawab-answer {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29.05px;
+  letter-spacing: 0%;
+  color: #676767;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  width: 100%;
+
+  margin-top: 10px;
+}
+
+.tanya-jawab-frame.active {
+  height: auto;
+}
+
+.tanya-jawab-frame.active .tanya-jawab-divider {
+  display: block;
+}
+
+.tanya-jawab-frame.active .tanya-jawab-answer {
+  opacity: 1;
+  max-height: 100px;
+}
+
+.tanya-jawab-frame.active .toggle-icon {
+  content: "-";
+}
+
+.footer {
+  transition: margin-top 0.4s ease-in-out;
+  position: absolute;
+  width: 1420px;
+  height: 404px;
+  top: 2350px;
+  left: 250px;
+  background: url("asset/footer.png") no-repeat center center/cover;
+  border-radius: 32px;
+}
+
+.footer-space {
+  height: 2380px;
+  width: 100%;
+}
+
+.footer-logo {
+  position: absolute;
+  width: 115px;
+  height: 115px;
+  top: 11px;
+  left: 60px;
+  object-fit: contain;
+}
+
+.footer-company-name {
+  position: absolute;
+  width: 244px;
+  height: 24px;
+  top: 126px;
+  left: 75px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24.2px;
+  letter-spacing: 0%;
+  color: #ffffff;
+}
+
+.footer-address {
+  position: absolute;
+  width: 422px;
+  height: 48px;
+  top: 150px;
+  left: 75px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24.2px;
+  letter-spacing: 0%;
+  color: #ffffff;
+}
+
+.layanan {
+  position: absolute;
+  width: 83px;
+  height: 24px;
+  top: 126px;
+  left: 565px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24.2px;
+  letter-spacing: 0%;
+  color: #ffffff;
+}
+
+.tentang-kami {
+  position: absolute;
+  width: 135px;
+  height: 24px;
+  top: 172px;
+  left: 565px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24.2px;
+  letter-spacing: 0%;
+  color: #ffffff;
+}
+
+.gallery {
+  position: absolute;
+  width: 70px;
+  height: 24px;
+  top: 218px;
+  left: 565px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24.2px;
+  letter-spacing: 0%;
+  color: #ffffff;
+}
+
+.hubungi-kami {
+  position: absolute;
+  width: 137px;
+  height: 24px;
+  top: 126px;
+  left: 768px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24.2px;
+  letter-spacing: 0%;
+  color: #ffffff;
+}
+
+.phone-icon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 158px;
+  left: 768px;
+  object-fit: contain;
+}
+
+.email-icon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 190px;
+  left: 768px;
+  object-fit: contain;
+}
+
+.footer-phone {
+  position: absolute;
+  width: 187px;
+  height: 24px;
+  top: 158px;
+  left: 797px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24.2px;
+  letter-spacing: 0%;
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
+  text-decoration-skip-ink: auto;
+}
+
+.footer-email {
+  position: absolute;
+  width: 304px;
+  height: 24px;
+  top: 191px;
+  left: 797px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24.2px;
+  letter-spacing: 0%;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-email:hover {
+  text-decoration: underline;
+}
+
+.sosial-media {
+  position: absolute;
+  width: 124px;
+  height: 24px;
+  top: 126px;
+  left: 1172px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24.2px;
+  letter-spacing: 0%;
+  color: #ffffff;
+}
+
+.instagram-icon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 158px;
+  left: 1169px;
+  object-fit: contain;
+}
+
+.footer-instagram {
+  position: absolute;
+  width: 122px;
+  height: 24px;
+  top: 158px;
+  left: 1198px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24.2px;
+  letter-spacing: 0%;
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
+  text-decoration-skip-ink: auto;
+}
+
+.our-story {
+  position: absolute;
+  top: 1605px;
+  left: 250px;
+  width: 1420px;
+  height: 441px;
+}
+
+.our-story-frame {
+  width: 100%;
+  height: 100%;
+  background-color: #d5f0fb;
+  border-radius: 32px;
+  position: relative;
+}
+
+.our-story-title {
+  position: absolute;
+  width: 224px;
+  height: 58px;
+  top: 50px;
+  left: 598px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58.09px;
+  letter-spacing: 0%;
+  color: #000000;
+}
+
+.our-story-text {
+  position: absolute;
+  width: 1320px;
+  height: 261px;
+  top: 130px;
+  left: 50px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29.05px;
+  letter-spacing: 0%;
+  color: #676767;
+}
+
+.our-story-frame-1 {
+  position: absolute;
+  width: 690px;
+  height: 218px;
+  top: 470px;
+  background-color: #d5f0fb;
+  border-radius: 32px;
+}
+
+.our-story-frame-2 {
+  position: absolute;
+  width: 690px;
+  height: 218px;
+  top: 470px;
+  left: 730px;
+  background-color: #d5f0fb;
+  border-radius: 32px;
+}
+
+.our-story-visi-title {
+  position: absolute;
+  width: 87px;
+  height: 58px;
+  top: 28px;
+  left: 302px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58.09px;
+  letter-spacing: 0%;
+  color: black;
+}
+
+.our-story-visi-text {
+  position: absolute;
+  width: 633px;
+  height: 58px;
+  top: 110px;
+  left: 29px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29.05px;
+  letter-spacing: 0%;
+  color: #676767;
+}
+
+.our-story-misi-title {
+  position: absolute;
+  width: 95px;
+  height: 58px;
+  top: 28px;
+  left: 300px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58.09px;
+  letter-spacing: 0%;
+  color: black;
+}
+
+.our-story-misi-text {
+  position: absolute;
+  width: 633px;
+  height: 58px;
+  top: 110px;
+  left: 29px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29.05px;
+  letter-spacing: 0%;
+  color: #676767;
+}
+
+@media screen and (max-width: 768px) {
+  .our-story-visi-title {
+    position: absolute;
+    width: 58px;
+    height: 39px;
+    top: 16px;
+    left: 141px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38.73px;
     letter-spacing: 0%;
     color: black;
-    margin-bottom: 30px;
-}
+  }
 
-/* Container untuk semua frame pertanyaan */
-.tanya-jawab-container {
+  .our-story-visi-text {
+    position: absolute;
+    width: 308px;
+    height: 57px;
+    top: 61px;
+    left: 16px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.36px;
+    letter-spacing: 0%;
+    color: #676767;
+  }
+
+  .our-story-misi-title {
+    position: absolute;
+    width: 64px;
+    height: 39px;
+    top: 16px;
+    left: 138px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38.73px;
+    letter-spacing: 0%;
+    color: black;
+  }
+
+  .our-story-misi-text {
+    position: absolute;
+    width: 308px;
+    height: 57px;
+    top: 61px;
+    left: 16px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.36px;
+    letter-spacing: 0%;
+    color: #676767;
+  }
+
+  .our-story {
+    position: absolute;
+    width: 340px;
+    height: 571px;
+    top: 1444px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .our-story-title {
+    width: 149px;
+    height: 39px;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 32px;
+    line-height: 39px;
+  }
+
+  .our-story-text {
+    width: 308px;
+    height: 494px;
+    top: 61px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    line-height: 19.36px;
+  }
+
+  .our-story-frame {
+    border-radius: 10px;
+  }
+
+  .our-story-frame-1 {
+    width: 340px;
+    height: 134px;
+    top: 600px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+  }
+
+  .our-story-frame-2 {
+    width: 340px;
+    height: 134px;
+    top: 760px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+  }
+
+  .sosial-media {
+    width: 99px;
+    height: 19px;
+    top: 340px;
+    left: 26px;
+    font-size: 16px;
+    line-height: 19.36px;
+  }
+
+  .instagram-icon {
+    width: 15px;
+    height: 15px;
+    top: 365px;
+    left: 26px;
+  }
+
+  .footer-instagram {
+    width: 73px;
+    height: 15px;
+    top: 365px;
+    left: 45px;
+    font-size: 12px;
+    line-height: 14.52px;
+  }
+
+  .footer-email {
+    width: 183px;
+    height: 15px;
+    top: 315px;
+    left: 45px;
+    font-size: 12px;
+    line-height: 14.52px;
+  }
+
+  .footer-phone {
+    width: 112px;
+    height: 15px;
+    top: 290px;
+    left: 45px;
+    font-size: 12px;
+    line-height: 14.52px;
+  }
+
+  .hubungi-kami {
+    width: 110px;
+    height: 19px;
+    top: 265px;
+    left: 26px;
+    font-size: 16px;
+    line-height: 19.36px;
+  }
+
+  .phone-icon {
+    width: 15px;
+    height: 15px;
+    top: 290px;
+    left: 26px;
+  }
+
+  .email-icon {
+    width: 15px;
+    height: 15px;
+    top: 315px;
+    left: 26px;
+  }
+
+  .layanan {
+    width: 66px;
+    height: 19px;
+    top: 160px;
+    left: 26px;
+    font-size: 16px;
+    line-height: 19.36px;
+  }
+
+  .tentang-kami {
+    width: 108px;
+    height: 19px;
+    top: 195px;
+    left: 26px;
+    font-size: 16px;
+    line-height: 19.36px;
+  }
+
+  .gallery {
+    width: 110px;
+    height: 19px;
+    top: 230px;
+    left: 26px;
+    font-size: 16px;
+    line-height: 19.36px;
+  }
+
+  .footer-address {
+    width: 254px;
+    height: 30px;
+    top: 110px;
+    left: 26px;
+    font-size: 12px;
+    line-height: 14.52px;
+  }
+
+  .footer-company-name {
+    width: 195px;
+    height: 19px;
+    top: 90px;
+    left: 26px;
+    font-size: 16px;
+    line-height: 19.36px;
+  }
+
+  .footer-logo {
+    width: 80px;
+    height: 80px;
+    left: 26px;
+  }
+
+  .footer {
+    width: 100%;
+    height: 450px;
+    top: 2400px;
+    left: 0;
+
+    border-radius: 0px;
+  }
+
+  .tanya-jawab {
+    position: absolute;
+    left: 10px;
+    width: 340px;
+    height: auto;
+    display: block;
+  }
+
+  .tanya-jawab-title {
+    display: none;
+  }
+
+  .tanya-jawab-container {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    /* Jarak antar frame */
-}
+    gap: 10px;
+    width: 100%;
+  }
 
-/* Styling untuk setiap frame pertanyaan */
-.tanya-jawab-frame {
+  .tanya-jawab-frame {
     position: relative;
-    width: 1420px;
-    background: #D5F0FB;
+    width: 340px;
+    height: 38px;
+
+    min-height: 38px;
+
+    background: #d5f0fb;
     border-radius: 10px;
     cursor: pointer;
     overflow: hidden;
-    transition: height 0.3s ease-in-out;
-    padding: 20px 50px;
+    transition: all 0.3s ease-in-out;
+    padding: 5px 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: column;
-}
+    flex-direction: row;
+  }
 
-/* Styling untuk teks pertanyaan */
-.tanya-jawab-text {
-    font-family: 'Inter', sans-serif;
-    font-size: 24px;
+  .tanya-jawab-text {
+    width: 249px;
+    height: 17px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+
     font-weight: 400;
-    line-height: 29.05px;
+    line-height: 17px;
     letter-spacing: 0%;
     color: black;
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-
-/* Styling untuk ikon toggle (+/-) */
-.toggle-icon {
     position: absolute;
-    right: 50px;
-    /* Geser ke kanan sesuai permintaan */
-    top: 25px;
-    width: 30px;
-    height: 30px;
-    font-size: 28px;
+    top: 11px;
+    left: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .toggle-icon {
+    position: absolute;
+    top: 12px;
+
+    left: 316px;
+
+    width: 14px;
+
+    height: 14px;
+
+    font-size: 14px;
+
     font-weight: bold;
     color: black;
     text-align: center;
-    line-height: 30px;
+    line-height: 14px;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
-}
+  }
 
-/* Styling untuk garis pembatas */
-.tanya-jawab-divider {
-    width: 1320px;
+  .tanya-jawab-divider {
+    width: 320px;
     height: 1px;
     background-color: black;
-    margin: 10px 0;
-    display: none;
-    /* Sembunyikan secara default */
-}
+    margin: 5px 0;
+    position: absolute;
+    top: 40px;
 
-/* Styling untuk jawaban */
-.tanya-jawab-answer {
-    font-family: 'Inter', sans-serif;
-    font-size: 24px;
+    left: 10px;
+    border-width: 0.75px;
+
+    display: none;
+  }
+
+  .tanya-jawab-answer {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
     font-weight: 400;
-    line-height: 29.05px;
+    line-height: 17px;
     letter-spacing: 0%;
     color: #676767;
     opacity: 0;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    width: 100%;
-    /* Menyesuaikan lebar kontainer */
-    margin-top: 10px;
-    /* Jarak dari garis pembatas */
-}
+    width: 320px;
 
-/* Styling untuk frame yang terbuka */
-.tanya-jawab-frame.active {
+    height: 85px;
+
+    position: absolute;
+    top: 50px;
+
+    left: 10px;
+  }
+
+  .tanya-jawab-frame.active {
+    min-height: 140px;
+
     height: auto;
-}
+  }
 
-/* Garis pembatas hanya terlihat saat frame aktif */
-.tanya-jawab-frame.active .tanya-jawab-divider {
+  .tanya-jawab-frame.active .tanya-jawab-divider {
     display: block;
-}
+  }
 
-/* Jawaban hanya terlihat saat frame aktif */
-.tanya-jawab-frame.active .tanya-jawab-answer {
+  .tanya-jawab-frame.active .tanya-jawab-answer {
     opacity: 1;
     max-height: 100px;
-}
+  }
 
-/* Styling untuk ikon saat frame aktif (ubah ke -) */
-.tanya-jawab-frame.active .toggle-icon {
+  .tanya-jawab-frame.active .toggle-icon {
     content: "-";
-}
+  }
 
-/* Styling untuk div footer */
-.footer {
-    transition: margin-top 0.4s ease-in-out; /* Efek transisi smooth */
+  .peluang-baru-box {
     position: absolute;
-    width: 1420px;
-    height: 404px;
-    top: 2350px;
-    left: 250px;
-    background: url('asset/footer.png') no-repeat center center/cover;
-    border-radius: 32px;
-}
+    left: 16px;
+    top: 300px;
+    width: 308px;
+    height: 43px;
+    border-radius: 4px;
+    border: 3px solid #0092ca;
+    padding: 0px;
+    gap: 10px;
+  }
 
-.footer-space {
-    height: 2380px; /* Sesuaikan dengan kebutuhan */
+  .peluang-baru-box-text {
     width: 100%;
-}
+    height: 19px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.36px;
+  }
 
-/* Styling untuk logo dalam footer (Desktop) */
-.footer-logo {
+  .peluang-baru-image {
     position: absolute;
-    width: 115px;
-    height: 115px;
-    top: 11px;
-    left: 60px;
-    object-fit: contain;
-}
+    left: 82px;
+    top: 347px;
+    width: 248px;
+    height: 318px;
+  }
 
-/* Styling untuk teks "PT Karuna Metta Ananda" di footer (Desktop) */
-.footer-company-name {
+  .peluang-baru-text {
     position: absolute;
-    width: 244px;
-    height: 24px;
-    top: 126px;
-    left: 75px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
+    left: 16px;
+    top: 141px;
+    width: 308px;
+    height: 120px;
+    font-family: "Inter", sans-serif;
     font-size: 20px;
-    line-height: 24.2px;
-    letter-spacing: 0%;
-    color: #FFFFFF;
-}
-
-/* Styling untuk alamat di footer (Desktop) */
-.footer-address {
-    position: absolute;
-    width: 422px;
-    height: 48px;
-    top: 150px;
-    left: 75px;
-    font-family: 'Inter', sans-serif;
     font-weight: 400;
-    font-size: 20px;
     line-height: 24.2px;
     letter-spacing: 0%;
-    color: #FFFFFF;
-}
+  }
 
-/* Styling untuk teks "Layanan" di footer (Desktop) */
-.layanan {
+  .peluang-baru-title {
     position: absolute;
-    width: 83px;
-    height: 24px;
-    top: 126px;
-    left: 565px;
-    font-family: 'Inter', sans-serif;
+    left: 16px;
+    top: 16px;
+    width: 234px;
+    height: 117px;
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
     font-weight: 700;
-    font-size: 20px;
-    line-height: 24.2px;
+    line-height: 38.73px;
     letter-spacing: 0%;
-    color: #FFFFFF;
-}
+  }
 
-/* Styling untuk teks "Tentang Kami" di footer (Desktop) */
-.tentang-kami {
+  .peluang-baru {
     position: absolute;
-    width: 135px;
-    height: 24px;
-    top: 172px;
-    left: 565px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24.2px;
-    letter-spacing: 0%;
-    color: #FFFFFF;
-}
+    left: 20px;
+    top: 3300px;
+    width: 340px;
+    height: 666px;
+  }
 
-/* Styling untuk teks "Gallery" di footer (Desktop) */
-.gallery {
-    position: absolute;
-    width: 70px;
-    height: 24px;
-    top: 218px;
-    left: 565px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24.2px;
-    letter-spacing: 0%;
-    color: #FFFFFF;
-}
-
-/* Styling untuk teks "Hubungi Kami" di footer (Desktop) */
-.hubungi-kami {
-    position: absolute;
-    width: 137px;
-    height: 24px;
-    top: 126px;
-    left: 768px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24.2px;
-    letter-spacing: 0%;
-    color: #FFFFFF;
-}
-
-/* Styling untuk ikon telepon di footer (Desktop) */
-.phone-icon {
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    top: 158px;
-    left: 768px;
-    object-fit: contain;
-}
-
-/* Styling untuk ikon email di footer (Desktop) */
-.email-icon {
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    top: 190px;
-    left: 768px;
-    object-fit: contain;
-}
-
-/* Styling untuk nomor telepon di footer (Desktop) */
-.footer-phone {
-    position: absolute;
-    width: 187px;
-    height: 24px;
-    top: 158px;
-    left: 797px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24.2px;
-    letter-spacing: 0%;
-    color: #FFFFFF;
-    text-decoration: underline;
-    text-decoration-style: solid;
-    text-decoration-thickness: auto;
-    text-decoration-skip-ink: auto;
-}
-
-.footer-email {
-    position: absolute;
-    width: 304px;
-    height: 24px;
-    top: 191px;
-    left: 797px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24.2px;
-    letter-spacing: 0%;
-    color: #FFFFFF;
-    text-decoration: none;
-    /* Hapus garis bawah default */
-}
-
-.footer-email:hover {
-    text-decoration: underline;
-    /* Tampilkan underline saat hover */
-}
-
-/* Styling untuk teks "Sosial Media" di footer (Desktop) */
-.sosial-media {
-    position: absolute;
-    width: 124px;
-    height: 24px;
-    top: 126px;
-    left: 1172px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24.2px;
-    letter-spacing: 0%;
-    color: #FFFFFF;
-}
-
-/* Styling untuk ikon Instagram di footer (Desktop) */
-.instagram-icon {
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    top: 158px;
-    left: 1169px;
-    object-fit: contain;
-}
-
-/* Styling untuk username Instagram di footer (Desktop) */
-.footer-instagram {
-    position: absolute;
-    width: 122px;
-    height: 24px;
-    top: 158px;
-    left: 1198px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24.2px;
-    letter-spacing: 0%;
-    color: #FFFFFF;
-    text-decoration: underline;
-    text-decoration-style: solid;
-    text-decoration-thickness: auto;
-    text-decoration-skip-ink: auto;
-}
-
-/* Styling untuk nav "our-story" */
-.our-story {
-    position: absolute;
-    top: 1605px;
-    left: 250px;
-    width: 1420px;
-    height: 441px;
-}
-
-/* Styling untuk frame dalam "our-story" */
-.our-story-frame {
+  .cuci-helm-box-text {
     width: 100%;
-    height: 100%;
-    background-color: #D5F0FB;
-    border-radius: 32px;
-    position: relative;
-}
-
-/* Styling untuk h2 "Our Story" */
-.our-story-title {
-    position: absolute;
-    width: 224px;
-    height: 58px;
-    top: 50px;
-    left: 598px;
-    font-family: 'Inter', sans-serif;
+    font-size: 16px;
     font-weight: 600;
-    font-size: 48px;
-    line-height: 58.09px;
-    letter-spacing: 0%;
-    color: #000000;
-}
+    line-height: 19.36px;
+  }
 
-/* Styling untuk teks dalam "Our Story" */
-.our-story-text {
+  .cuci-helm-box {
     position: absolute;
-    width: 1320px;
-    height: 261px;
-    top: 130px;
-    left: 50px;
-    font-family: 'Inter', sans-serif;
+    left: 26px;
+    top: 590px;
+    width: 308px;
+    height: 60px;
+    border-radius: 4px;
+    padding: 12px 63.5px 12px 63.5px;
+    gap: 10px;
+  }
+
+  .cuci-helm-image {
+    position: absolute;
+    left: 26px;
+    top: 16px;
+    width: 326px;
+    height: 287px;
+  }
+
+  .cuci-helm-text {
+    position: absolute;
+    left: 26px;
+    top: 447px;
+    width: 308px;
+    height: 96px;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 29.05px;
+    line-height: 24.2px;
     letter-spacing: 0%;
-    color: #676767;
-}
+  }
 
-/* Styling untuk frame pertama dalam "our-story" */
-.our-story-frame-1 {
+  .cuci-helm-title {
     position: absolute;
-    width: 690px;
-    height: 218px;
-    top: 470px;
-    background-color: #D5F0FB;
-    border-radius: 32px;
-}
+    left: 26px;
+    top: 322px;
+    width: 308px;
+    height: 117px;
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38.73px;
+    letter-spacing: 0%;
+  }
 
-/* Styling untuk frame kedua dalam "our-story" */
-.our-story-frame-2 {
+  .cuci-helm {
     position: absolute;
-    width: 690px;
-    height: 218px;
-    top: 470px;
-    left: 730px;
-    background-color: #D5F0FB;
-    border-radius: 32px;
-}
+    top: 2562px;
+    left: 0;
+    width: 100%;
+    height: 700px;
+  }
 
-/* Styling untuk "Visi" dalam frame-1 di mode desktop */
-.our-story-visi-title {
-    position: absolute;
-    width: 87px;
-    height: 58px;
-    top: 28px;
-    left: 302px;
-    font-family: 'Inter', sans-serif;
+  .mesin-desc-1 {
+    width: 308px;
+    height: 57px;
+    top: 362px;
+    left: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+  }
+
+  .mesin-desc-2 {
+    width: 308px;
+    height: 76px;
+    top: 642px;
+    left: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+  }
+
+  .mesin-desc-3 {
+    width: 308px;
+    height: 76px;
+    top: 941px;
+    left: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+  }
+
+  .mesin-text-1 {
+    width: 200px;
+    height: 24px;
+    top: 338px;
+    left: 78px;
+    font-size: 20px;
     font-weight: 600;
-    font-size: 48px;
-    line-height: 58.09px;
-    letter-spacing: 0%;
-    color: black;
-}
+    line-height: 24.2px;
+  }
 
-.our-story-visi-text {
-    position: absolute;
-    width: 633px;
-    height: 58px;
-    top: 110px;
-    left: 29px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29.05px;
-    letter-spacing: 0%;
-    color: #676767;
-}
-
-/* Styling untuk "Misi" dalam frame-2 di mode desktop */
-.our-story-misi-title {
-    position: absolute;
-    width: 95px;
-    height: 58px;
-    top: 28px;
-    left: 300px;
-    font-family: 'Inter', sans-serif;
+  .mesin-text-2 {
+    width: 200px;
+    height: 24px;
+    top: 618px;
+    left: 78px;
+    font-size: 20px;
     font-weight: 600;
-    font-size: 48px;
-    line-height: 58.09px;
-    letter-spacing: 0%;
-    color: black;
-}
+    line-height: 24.2px;
+  }
 
-.our-story-misi-text {
+  .mesin-text-3 {
+    width: 200px;
+    height: 24px;
+    top: 917px;
+    left: 77px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+  }
+
+  .mesin-gambar-1 {
+    width: 159px;
+    height: 159px;
+    top: 167px;
+    left: 91px;
+  }
+
+  .mesin-gambar-2 {
+    width: 159px;
+    height: 159px;
+    top: 447px;
+    left: 91px;
+  }
+
+  .mesin-gambar-3 {
+    width: 159px;
+    height: 159px;
+    top: 746px;
+    left: 91px;
+  }
+
+  .kenapa-mesin-title {
     position: absolute;
-    width: 633px;
-    height: 58px;
-    top: 110px;
-    left: 29px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29.05px;
+    left: 16px;
+    top: 16px;
+    width: 308px;
+    height: 117px;
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38.73px;
     letter-spacing: 0%;
-    color: #676767;
-}
+  }
 
+  .kenapa-mesin-kami {
+    position: absolute;
+    top: 1463px;
+    left: 10px;
+    width: 355px;
+    height: 1049px;
+    border-radius: 10px;
+  }
 
-/* Responsif untuk Mobile */
-@media screen and (max-width: 768px) {
-
-    /* Styling untuk judul "Visi" dalam frame-1 */
-    .our-story-visi-title {
-        position: absolute;
-        width: 58px;
-        height: 39px;
-        top: 16px;
-        left: 141px;
-        font-family: 'Inter', sans-serif;
-        font-weight: 600;
-        font-size: 32px;
-        line-height: 38.73px;
-        letter-spacing: 0%;
-        color: black;
-    }
-
-    /* Styling untuk teks dalam "Visi" */
-    .our-story-visi-text {
-        position: absolute;
-        width: 308px;
-        height: 57px;
-        top: 61px;
-        left: 16px;
-        font-family: 'Inter', sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 19.36px;
-        letter-spacing: 0%;
-        color: #676767;
-    }
-
-    /* Styling untuk judul "Misi" dalam frame-2 */
-    .our-story-misi-title {
-        position: absolute;
-        width: 64px;
-        height: 39px;
-        top: 16px;
-        left: 138px;
-        font-family: 'Inter', sans-serif;
-        font-weight: 600;
-        font-size: 32px;
-        line-height: 38.73px;
-        letter-spacing: 0%;
-        color: black;
-    }
-
-    /* Styling untuk teks dalam "Misi" */
-    .our-story-misi-text {
-        position: absolute;
-        width: 308px;
-        height: 57px;
-        top: 61px;
-        left: 16px;
-        font-family: 'Inter', sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 19.36px;
-        letter-spacing: 0%;
-        color: #676767;
-    }
-
-    .our-story {
-        position: absolute;
-        width: 340px;
-        height: 571px;
-        top: 1444px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    /* Styling untuk h2 "Our Story" di mode mobile */
-    .our-story-title {
-        width: 149px;
-        height: 39px;
-        top: 16px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 32px;
-        line-height: 39px;
-    }
-
-    /* Styling untuk teks dalam "Our Story" di mode mobile */
-    .our-story-text {
-        width: 308px;
-        height: 494px;
-        top: 61px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 16px;
-        line-height: 19.36px;
-    }
-
-    .our-story-frame{
-        border-radius: 10px;
-    }
-
-    /* Styling untuk frame pertama dalam "our-story" di mode mobile */
-    .our-story-frame-1 {
-        width: 340px;
-        height: 134px;
-        top: 600px;
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 10px;
-    }
-
-    /* Styling untuk frame kedua dalam "our-story" di mode mobile */
-    .our-story-frame-2 {
-        width: 340px;
-        height: 134px;
-        top: 760px;
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 10px;
-    }
-
-    .sosial-media {
-        width: 99px;
-        height: 19px;
-        top: 340px;
-        left: 26px;
-        font-size: 16px;
-        line-height: 19.36px;
-    }
-
-    .instagram-icon {
-        width: 15px;
-        height: 15px;
-        top: 365px;
-        left: 26px;
-    }
-
-    .footer-instagram {
-        width: 73px;
-        height: 15px;
-        top: 365px;
-        left: 45px;
-        font-size: 12px;
-        line-height: 14.52px;
-    }
-
-    .footer-email {
-        width: 183px;
-        height: 15px;
-        top: 315px;
-        left: 45px;
-        font-size: 12px;
-        line-height: 14.52px;
-    }
-
-    .footer-phone {
-        width: 112px;
-        height: 15px;
-        top: 290px;
-        left: 45px;
-        font-size: 12px;
-        line-height: 14.52px;
-    }
-
-    .hubungi-kami {
-        width: 110px;
-        height: 19px;
-        top: 265px;
-        left: 26px;
-        font-size: 16px;
-        line-height: 19.36px;
-    }
-
-    .phone-icon {
-        width: 15px;
-        height: 15px;
-        top: 290px;
-        left: 26px;
-    }
-
-    .email-icon {
-        width: 15px;
-        height: 15px;
-        top: 315px;
-        left: 26px;
-    }
-
-    .layanan {
-        width: 66px;
-        height: 19px;
-        top: 160px;
-        left: 26px;
-        font-size: 16px;
-        line-height: 19.36px;
-    }
-
-    .tentang-kami {
-        width: 108px;
-        height: 19px;
-        top: 195px;
-        left: 26px;
-        font-size: 16px;
-        line-height: 19.36px;
-    }
-
-    .gallery {
-        width: 110px;
-        height: 19px;
-        top: 230px;
-        left: 26px;
-        font-size: 16px;
-        line-height: 19.36px;
-    }
-
-    .footer-address {
-        width: 254px;
-        height: 30px;
-        top: 110px;
-        left: 26px;
-        font-size: 12px;
-        line-height: 14.52px;
-    }
-
-    .footer-company-name {
-        width: 195px;
-        height: 19px;
-        top: 90px;
-        left: 26px;
-        font-size: 16px;
-        line-height: 19.36px;
-    }
-
-    .footer-logo {
-        width: 80px;
-        height: 80px;
-        left: 26px;
-    }
-
-    .footer {
-        width: 100%;
-        height: 450px;
-        top: 2400px;
-        left: 0;
-        /* Pastikan berada di tengah layar */
-        border-radius: 0px;
-        /* Opsional, bisa dihapus jika ingin tetap berbentuk */
-    }
-
-    /* Styling untuk div "Tanya Jawab" pada mode mobile */
-    .tanya-jawab {
-        position: absolute;
-        left: 10px;
-        width: 340px;
-        height: auto;
-        display: block;
-    }
-
-    /* Menyembunyikan H2 di mode mobile */
-    .tanya-jawab-title {
-        display: none;
-    }
-
-    /* Container untuk semua frame pertanyaan */
-    .tanya-jawab-container {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-    }
-
-    /* Styling untuk setiap frame pertanyaan */
-    .tanya-jawab-frame {
-        position: relative;
-        width: 340px;
-        height: 38px;
-        /* Ukuran frame sebelum dibuka */
-        min-height: 38px;
-        /* Menjamin frame tidak mengecil */
-        background: #D5F0FB;
-        border-radius: 10px;
-        cursor: pointer;
-        overflow: hidden;
-        transition: all 0.3s ease-in-out;
-        padding: 5px 10px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: row;
-    }
-
-    /* Styling untuk teks pertanyaan */
-    .tanya-jawab-text {
-        width: 249px;
-        height: 17px;
-        font-family: 'Inter', sans-serif;
-        font-size: 14px;
-        /* Ukuran font lebih kecil untuk mobile */
-        font-weight: 400;
-        line-height: 17px;
-        letter-spacing: 0%;
-        color: black;
-        position: absolute;
-        top: 11px;
-        left: 10px;
-        padding-bottom: 10px;
-        padding-top: 10px;
-    }
-
-    /* Styling untuk ikon toggle (+/-) pada mode mobile */
-    .toggle-icon {
-        position: absolute;
-        top: 12px;
-        /* Posisi atas */
-        left: 316px;
-        /* Posisi kiri */
-        width: 14px;
-        /* Lebar ikon */
-        height: 14px;
-        /* Tinggi ikon */
-        font-size: 14px;
-        /* Ukuran font lebih kecil untuk mobile */
-        font-weight: bold;
-        color: black;
-        text-align: center;
-        line-height: 14px;
-        cursor: pointer;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    /* Styling untuk garis pembatas pada mode mobile */
-    .tanya-jawab-divider {
-        width: 320px;
-        height: 1px;
-        background-color: black;
-        margin: 5px 0;
-        position: absolute;
-        top: 40px;
-        /* Posisi dari atas frame */
-        left: 10px;
-        border-width: 0.75px;
-        /* Lebar garis */
-        display: none;
-        /* Sembunyikan secara default */
-    }
-
-    /* Styling untuk jawaban di mode mobile */
-    .tanya-jawab-answer {
-        font-family: 'Inter', sans-serif;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 17px;
-        letter-spacing: 0%;
-        color: #676767;
-        opacity: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-        width: 320px;
-        /* Menyesuaikan lebar kontainer */
-        height: 85px;
-        /* Ukuran teks jawaban */
-        position: absolute;
-        top: 50px;
-        /* Posisi teks jawaban */
-        left: 10px;
-    }
-
-    /* Menjaga frame tetap besar meskipun jawaban tidak terbuka */
-    .tanya-jawab-frame.active {
-        min-height: 140px;
-        /* Menjamin frame memiliki ukuran cukup untuk jawaban */
-        height: auto;
-        /* Ukuran otomatis */
-    }
-
-    /* Garis pembatas hanya terlihat saat frame aktif */
-    .tanya-jawab-frame.active .tanya-jawab-divider {
-        display: block;
-    }
-
-    /* Jawaban hanya terlihat saat frame aktif */
-    .tanya-jawab-frame.active .tanya-jawab-answer {
-        opacity: 1;
-        max-height: 100px;
-    }
-
-    /* Styling untuk ikon saat frame aktif (ubah ke -) */
-    .tanya-jawab-frame.active .toggle-icon {
-        content: "-";
-    }
-
-    .peluang-baru-box {
-        position: absolute;
-        left: 16px;
-        top: 300px;
-        width: 308px;
-        height: 43px;
-        border-radius: 4px;
-        border: 3px solid #0092CA;
-        padding: 0px;
-        gap: 10px;
-    }
-
-    .peluang-baru-box-text {
-        width: 100%;
-        height: 19px;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 19.36px;
-    }
-
-    .peluang-baru-image {
-        position: absolute;
-        left: 82px;
-        top: 347px;
-        width: 248px;
-        height: 318px;
-    }
-
-    .peluang-baru-text {
-        position: absolute;
-        left: 16px;
-        top: 141px;
-        width: 308px;
-        height: 120px;
-        font-family: 'Inter', sans-serif;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 24.2px;
-        letter-spacing: 0%;
-    }
-
-    .peluang-baru-title {
-        position: absolute;
-        left: 16px;
-        top: 16px;
-        width: 234px;
-        height: 117px;
-        font-family: 'Inter', sans-serif;
-        font-size: 32px;
-        font-weight: 700;
-        line-height: 38.73px;
-        letter-spacing: 0%;
-    }
-
-    .peluang-baru {
-        position: absolute;
-        left: 20px;
-        top: 3300px;
-        width: 340px;
-        height: 666px;
-    }
-
-    .cuci-helm-box-text {
-        width: 100%;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 19.36px;
-    }
-
-    .cuci-helm-box {
-        position: absolute;
-        left: 26px;
-        top: 590px;
-        width: 308px;
-        height: 60px;
-        border-radius: 4px;
-        padding: 12px 63.5px 12px 63.5px;
-        gap: 10px;
-    }
-
-    .cuci-helm-image {
-        position: absolute;
-        left: 26px;
-        top: 16px;
-        width: 326px;
-        height: 287px;
-    }
-
-    .cuci-helm-text {
-        position: absolute;
-        left: 26px;
-        top: 447px;
-        width: 308px;
-        height: 96px;
-        font-family: 'Inter', sans-serif;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 24.2px;
-        letter-spacing: 0%;
-    }
-
-    .cuci-helm-title {
-        position: absolute;
-        left: 26px;
-        top: 322px;
-        width: 308px;
-        height: 117px;
-        font-family: 'Inter', sans-serif;
-        font-size: 32px;
-        font-weight: 700;
-        line-height: 38.73px;
-        letter-spacing: 0%;
-    }
-
-    .cuci-helm {
-        position: absolute;
-        top: 2562px;
-        left: 0;
-        width: 100%;
-        height: 700px;
-    }
-
-    .mesin-desc-1 {
-        width: 308px;
-        height: 57px;
-        top: 362px;
-        left: 16px;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 19.36px;
-    }
-
-    .mesin-desc-2 {
-        width: 308px;
-        height: 76px;
-        top: 642px;
-        left: 16px;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 19.36px;
-    }
-
-    .mesin-desc-3 {
-        width: 308px;
-        height: 76px;
-        top: 941px;
-        left: 16px;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 19.36px;
-    }
-
-    .mesin-text-1 {
-        width: 200px;
-        height: 24px;
-        top: 338px;
-        left: 78px;
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 24.2px;
-    }
-
-    .mesin-text-2 {
-        width: 200px;
-        height: 24px;
-        top: 618px;
-        left: 78px;
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 24.2px;
-    }
-
-    .mesin-text-3 {
-        width: 200px;
-        height: 24px;
-        top: 917px;
-        left: 77px;
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 24.2px;
-    }
-
-    .mesin-gambar-1 {
-        width: 159px;
-        height: 159px;
-        top: 167px;
-        left: 91px;
-    }
-
-    .mesin-gambar-2 {
-        width: 159px;
-        height: 159px;
-        top: 447px;
-        left: 91px;
-    }
-
-    .mesin-gambar-3 {
-        width: 159px;
-        height: 159px;
-        top: 746px;
-        left: 91px;
-    }
-
-    .kenapa-mesin-title {
-        position: absolute;
-        left: 16px;
-        top: 16px;
-        width: 308px;
-        height: 117px;
-        font-family: 'Inter', sans-serif;
-        font-size: 32px;
-        font-weight: 700;
-        line-height: 38.73px;
-        letter-spacing: 0%;
-    }
-
-    .kenapa-mesin-kami {
-        position: absolute;
-        top: 1463px;
-        left: 10px;
-        width: 355px;
-        height: 1049px;
-        border-radius: 10px;
-    }
-
-/* Pastikan elemen tidak melebihi viewport */
-.siapa-kami {
+  .siapa-kami {
     position: relative;
     top: 820px;
-    left: 50%; /* Pusatkan elemen ke tengah */
-    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
-    width: 100%; /* Pastikan elemen tidak lebih dari viewport */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
     max-width: 100%;
     height: auto;
-}
+  }
 
-/* Pastikan teks tidak menyebabkan overflow */
-.siapa-kami-text {
+  .siapa-kami-text {
     position: absolute;
-    left: 50%; /* Pusatkan elemen ke tengah */
-    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
+    left: 50%;
+    transform: translateX(-50%);
     top: 350px;
     width: 100%;
-    max-width: 308px; /* Batas maksimal sesuai desain */
-    font-family: 'Inter', sans-serif;
+    max-width: 308px;
+    font-family: "Inter", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 19.36px;
     letter-spacing: 0%;
     word-wrap: break-word;
     color: #676767;
-}
+  }
 
-/* Pastikan judul tidak menyebabkan overflow */
-.siapa-kami-title {
+  .siapa-kami-title {
     position: absolute;
-    left: 50%; /* Pusatkan elemen ke tengah */
-    transform: translateX(-50%); /* Pastikan elemen benar-benar di tengah */
+    left: 50%;
+    transform: translateX(-50%);
     top: 300px;
     width: 100%;
     max-width: 308px;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 32px;
     font-weight: 700;
     line-height: 38.73px;
-}
+  }
 
-/* Pastikan gambar tidak menyebabkan overflow */
-.siapa-kami-image {
+  .siapa-kami-image {
     width: 100%;
-    max-width: 320px; /* Batasi agar tidak lebih besar dari desain */
+    max-width: 320px;
     height: auto;
     display: block;
-    margin: 0 auto; /* Pastikan tetap di tengah */
+    margin: 0 auto;
+  }
+
+  .navbar {
+    width: 100%;
+
+    height: 70px;
+
+    top: 1px;
+
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .sampul-price {
+    top: 570px;
+    left: 26px;
+    width: 308px;
+    height: 179.74px;
+  }
+
+  .sampul {
+    height: 800px;
+  }
+
+  .sampul-text {
+    top: 120px;
+    left: 26px;
+    right: 26px;
+    width: auto;
+    height: 78px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38.73px;
+    letter-spacing: 0%;
+  }
+
+  .sampul-subtext {
+    top: 280px;
+    left: 26px;
+    right: 26px;
+    width: auto;
+    height: 72px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24.2px;
+    letter-spacing: 0%;
+  }
+
+  .sampul-image {
+    top: 400px;
+    left: 26px;
+    right: 26px;
+    width: auto;
+    height: 300px;
+  }
+
+  .nav-container {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1102;
+  }
+
+  .logo img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .menu-toggle {
+    display: block;
+    z-index: 1101;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url("asset/bg-navbar.png") no-repeat center center/cover;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding-top: 140px;
+    z-index: 1100;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 10px 0;
+  }
+
+  .nav-links a {
+    font-size: 20px;
+    font-weight: 300;
+    color: white;
+  }
+
+  .nav-links a:hover {
+    color: #ffcc00;
+  }
+
+  .right-menu {
+    display: none;
+  }
+
+  .mobile-contact {
+    display: block !important;
+  }
+
+  .mobile-info {
+    display: none;
+    position: fixed;
+    bottom: -600px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    z-index: 1101;
+    padding: 20px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .mobile-info h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  .mobile-info p {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.4;
+  }
+
+  .nav-links.active + .mobile-info {
+    display: block;
+  }
 }
 
-    .navbar {
-        width: 100%;
-        /* Sesuai permintaan */
-        height: 70px;
-        /* Sesuai permintaan */
-        top: 1px;
-        /* Sesuai permintaan */
-        left: 50%;
-        transform: translateX(-50%);
-        /* Agar tetap di tengah layar */
-    }
-
-    .sampul-price {
-        top: 570px;
-        left: 26px;
-        width: 308px;
-        height: 179.74px;
-    }
-
-    .sampul {
-        height: 800px;
-        /* Sesuaikan tinggi frame di mode mobile */
-    }
-
-    .sampul-text {
-        top: 145px;
-        left: 26px;
-        right: 26px;
-        width: auto;        
-        height: 78px;
-        font-size: 32px;
-        font-weight: 700;
-        line-height: 38.73px;
-        letter-spacing: 0%;
-    }
-
-    .sampul-subtext {
-        top: 280px;
-        left: 26px;
-        right: 26px;
-        width: auto;        
-        height: 72px;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 24.2px;
-        letter-spacing: 0%;
-    }
-
-    .sampul-image {
-        top: 400px;
-        left: 50%; 
-        transform: translateX(-50%);
-        width: 340px;
-        height: 300px;
-    }
-
-    .nav-container {
-        width: 100%;
-        padding: 0 20px;
-    }
-
-    .logo {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1102;
-    }
-
-    .logo img {
-        width: 70px;
-        height: 70px;
-    }
-
-    .menu-toggle {
-        display: block;
-        z-index: 1101;
-    }
-
-    /* NAVBAR MOBILE - Fullscreen */
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background: url('asset/bg-navbar.png') no-repeat center center/cover;
-        justify-content: flex-start;
-        align-items: center;
-        text-align: center;
-        padding-top: 140px;
-        z-index: 1100;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        padding: 10px 0;
-    }
-
-    .nav-links a {
-        font-size: 20px;
-        font-weight: 300;
-        color: white;
-    }
-
-    .nav-links a:hover {
-        color: #ffcc00;
-    }
-
-    .right-menu {
-        display: none;
-    }
-
-    .mobile-contact {
-        display: block !important;
-    }
-
-    /* Styling Mobile Info */
-    .mobile-info {
-        display: none;
-        position: fixed;
-        bottom: -600px;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-        color: white;
-        z-index: 1101;
-        padding: 20px 10px;
-        white-space: nowrap;
-        overflow: hidden;
-    }
-
-    .mobile-info h2 {
-        font-size: 20px;
-        font-weight: 500;
-        margin-bottom: 5px;
-    }
-
-    .mobile-info p {
-        font-size: 12px;
-        font-weight: 300;
-        line-height: 1.4;
-    }
-
-    /* Ketika Navbar Aktif, Tampilkan Mobile Info */
-    .nav-links.active+.mobile-info {
-        display: block;
-    }
-}
-
-/* Sembunyikan "Hubungi Kami" di desktop dari dalam .nav-links */
 @media screen and (min-width: 769px) {
-    .mobile-contact {
-        display: none !important;
-    }
+  .mobile-contact {
+    display: none !important;
+  }
 
-    .mobile-info {
-        display: none;
-    }
+  .mobile-info {
+    display: none;
+  }
 }
